@@ -24,5 +24,11 @@ namespace LABS_WPF
         {
             InitializeComponent();
         }
+
+        private void StackPanel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+                DragMove(); // Déplacer
+        }
     }
 }

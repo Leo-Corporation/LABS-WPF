@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LABS_WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="LABS WPF" Height="382" Width="673" WindowStartupLocation="CenterScreen" Icon="Logo.png" WindowStyle="None">
     <Grid>
-        
+        <StackPanel Orientation="Horizontal" Height="25" VerticalAlignment="Top" MouseMove="StackPanel_MouseMove">
+            <Image Source="Logo.png" Height="20"></Image>
+            <TextBlock Margin="5 2" FontWeight="Bold" FontSize="14">LABS WPF</TextBlock>
+        </StackPanel>
+        <Separator Margin="0,24,0,349"/>
+        <StackPanel Margin="0 15 0 0" Orientation="Horizontal" Height="50" VerticalAlignment="Top">
+            <Button Style="{StaticResource LABSButton}" Content="Paramètres" Width="78"></Button>
+            <Button Style="{StaticResource LABSButton}" Content="A propos" Width="63" Margin="7,14"></Button>
+        </StackPanel>
     </Grid>
 </Window>
