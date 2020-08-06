@@ -4,6 +4,15 @@
              xmlns:local="clr-namespace:LABS_WPF"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <Style x:Key="LinkTextBlock" TargetType="{x:Type TextBlock}">
+            <Setter Property="Foreground" Value="Blue"/>
+            <Setter Property="FontStyle" Value="Normal"/>
+            <Setter Property="TextDecorations" Value="Underline"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Text" Value="LinkTextBlock"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+        
         <Style x:Key="LABSButton" TargetType="{x:Type Button}">
             <Setter Property="Background">
                 <Setter.Value>
