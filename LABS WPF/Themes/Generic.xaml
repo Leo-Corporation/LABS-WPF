@@ -1,0 +1,36 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:LABS_WPF">
+    
+
+    <Style TargetType = "{x:Type local:TestButton}"
+      BasedOn = "{StaticResource {x:Type Button}}">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush>
+                    <GradientStop Color="#FF4600FF"/>
+                    <GradientStop Color="#FF8000FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="MinWidth" Value="50"/>
+        <Setter Property="Height" Value="22"/>
+        <Setter Property="Margin" Value="7"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Padding" Value="2"/>
+            
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:TestButton">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0" CornerRadius="{Binding Radius}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"></ContentPresenter>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
