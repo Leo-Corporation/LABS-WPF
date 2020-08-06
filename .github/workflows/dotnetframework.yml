@@ -16,7 +16,8 @@ jobs:
         uses: NuGet/setup-nuget@v1.0.2
      
       - name: Restore NuGet Packages
-        run: nuget restore "LABS Experiences\LABS Experiences.sln"
+        run: nuget restore "LABS WPF.sln"
  
       - name: Build and Publish App
         run: msbuild "LABS WPF.sln" /p:Configuration=Release
+  
