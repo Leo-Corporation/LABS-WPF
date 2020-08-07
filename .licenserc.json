@@ -1,0 +1,14 @@
+{
+    "**/*.cs": [
+        "/*",
+        "MIT License",
+        "",
+        "Copyright (c) Léo Corporation"
+    ],
+
+    "ignore": [
+        "**/*.Designer.cs",
+        "LABS WPF/LABS WPF/Properties/",
+        "LABS WPF/LABS WPF/obj/"
+    ]
+}
