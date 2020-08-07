@@ -8,7 +8,7 @@
 
     "ignore": [
         "**/*.Designer.cs",
-        "LABS WPF/LABS WPF/Properties/",
-        "LABS WPF/LABS WPF/obj/"
+        "LABS WPF/Properties/",
+        "LABS WPF/obj/"
     ]
 }
