@@ -4,12 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LABS_WPF"
+        xmlns:extensions="clr-namespace:LABS_WPF.Extensions"
         mc:Ignorable="d"
         Title="LABS WPF" Height="331" Width="538" WindowStartupLocation="CenterScreen" Icon="Logo.png" WindowStyle="SingleBorderWindow">
     <Grid>
         <StackPanel  Orientation="Horizontal" Height="50" VerticalAlignment="Top">
             <Button x:Name="LABSButton1" Style="{StaticResource LABSButton}" FontSize="14" Content="A propos" Width="82" Height="Auto" Margin="7" Cursor="Hand" Click="LABSButton1_Click"></Button>
             <Button x:Name="LABSButton2" Style="{StaticResource LABSButton}" FontSize="14" Content="GitHub" Width="82" Height="Auto" Margin="7" Cursor="Hand" Click="LABSButton2_Click"></Button>
+            <local:TestButton Content="Test" extensions:CornerRadiusExtension.CornerRadius="5" Height="35" Margin="7,7,7,7.6" Width="28"/>
         </StackPanel>
     </Grid>
 </Window>
