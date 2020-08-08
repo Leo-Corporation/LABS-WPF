@@ -1,6 +1,7 @@
 <ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:extensions="clr-namespace:LABS_WPF.Extensions"
     xmlns:local="clr-namespace:LABS_WPF">
     
 
@@ -26,7 +27,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="local:TestButton">
-                    <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0" CornerRadius="{Binding Radius}">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0" CornerRadius="{TemplateBinding extensions:CornerRadiusExtension.CornerRadius}">
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"></ContentPresenter>
                     </Border>
                 </ControlTemplate>
