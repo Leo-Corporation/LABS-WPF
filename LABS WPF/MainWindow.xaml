@@ -8,10 +8,18 @@
         mc:Ignorable="d"
         Title="LABS WPF" Height="331" Width="538" WindowStartupLocation="CenterScreen" Icon="Logo.png" WindowStyle="SingleBorderWindow">
     <Grid>
-        <StackPanel  Orientation="Horizontal" Height="50" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="126*"/>
+        </Grid.RowDefinitions>
+        <StackPanel  Orientation="Horizontal" Height="50" VerticalAlignment="Top" Panel.ZIndex="1" Margin="0,0,0.2,0" Grid.RowSpan="2">
             <Button x:Name="LABSButton1" Style="{StaticResource LABSButton}" FontSize="14" Content="A propos" Width="82" Height="Auto" Margin="7" Cursor="Hand" Click="LABSButton1_Click"></Button>
             <Button x:Name="LABSButton2" Style="{StaticResource LABSButton}" FontSize="14" Content="GitHub" Width="82" Height="Auto" Margin="7" Cursor="Hand" Click="LABSButton2_Click"></Button>
             <local:TestButton Content="Test" extensions:CornerRadiusExtension.CornerRadius="5" Height="35" Margin="7,7,7,7.6" Width="28"/>
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Top" Margin="0,47,0.2,-0.4" Height="255" Grid.RowSpan="2">
+            <local:TestButton extensions:CornerRadiusExtension.CornerRadius="5" Content="LeoCorpLibrary" Margin="7,7,426.2,7" Height="34" Click="TestButton_Click"></local:TestButton>
         </StackPanel>
     </Grid>
 </Window>

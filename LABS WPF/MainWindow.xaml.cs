@@ -82,5 +82,10 @@ namespace LABS_WPF
             About about = new About();
             about.Show(); // Ouvrir la fenêtre "A propos"
         }
+
+        private void TestButton_Click(object sender, RoutedEventArgs e)
+        {
+            new Windows.LeoCorpLibrary().Show();
+        }
     }
 }
