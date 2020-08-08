@@ -73,27 +73,5 @@ namespace LABS_WPF
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(TestButton), new FrameworkPropertyMetadata(typeof(TestButton)));
         }
-
-        public int Radius
-        {
-            get { return (int)GetValue(RadiusProperty); }
-            set { SetValue(RadiusProperty, value);}
-        }
-
-        // Using a DependencyProperty as the backing store for Radius.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty RadiusProperty =
-            DependencyProperty.RegisterAttached("Radius", typeof(int), typeof(TestButton), new PropertyMetadata(10));
-
-        public static int GetRadius(UIElement element)
-        {
-            return (int)element.GetValue(RadiusProperty);
-        }
-
-        public static void SetRadius(UIElement element, int value)
-        {
-            element.SetValue(RadiusProperty, value);
-        }
-
-       
     }
 }
