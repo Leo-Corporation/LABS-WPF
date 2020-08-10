@@ -1,0 +1,22 @@
+﻿<Window x:Class="LABS_WPF.Windows.UserControlAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:windows="clr-namespace:LABS_WPF.Windows"
+        xmlns:extensions="clr-namespace:LABS_WPF.Extensions"
+        xmlns:local="clr-namespace:LABS_WPF"
+        mc:Ignorable="d"
+        Title="UserControlAdd - LABS WPF" Height="331" Width="538" WindowStartupLocation="CenterScreen" Icon="Logo.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="285"/>
+        </Grid.RowDefinitions>
+        <StackPanel x:Name="StackPanel" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0" Height="50">
+            <local:TestButton x:Name="button1" Content="Ajouter" extensions:CornerRadiusExtension.CornerRadius="5" Click="TestButton_Click"/>
+        </StackPanel>
+
+        <StackPanel x:Name="StackPanel2" FlowDirection="LeftToRight" CanHorizontallyScroll="True" CanVerticallyScroll="True" Orientation="Vertical" Grid.Row="2"/>
+    </Grid>
+</Window>
