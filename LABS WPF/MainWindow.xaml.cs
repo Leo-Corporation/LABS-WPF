@@ -87,5 +87,10 @@ namespace LABS_WPF
         {
             new Windows.LeoCorpLibrary().Show();
         }
+
+        private void TestButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            new Windows.UserControlAdd().Show();
+        }
     }
 }

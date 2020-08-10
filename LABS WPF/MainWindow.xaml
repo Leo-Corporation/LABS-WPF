@@ -12,14 +12,15 @@
             <RowDefinition Height="25*"/>
             <RowDefinition Height="126*"/>
         </Grid.RowDefinitions>
-        <StackPanel  Orientation="Horizontal" Height="50" VerticalAlignment="Top" Panel.ZIndex="1" Margin="0,0,0.2,0" Grid.RowSpan="2">
+        <StackPanel  Orientation="Horizontal" Height="50" VerticalAlignment="Top" Panel.ZIndex="1" Margin="0,0,0.2,0" Grid.RowSpan="1">
             <Button x:Name="LABSButton1" Style="{StaticResource LABSButton}" FontSize="14" Content="A propos" Width="82" Height="Auto" Margin="7" Cursor="Hand" Click="LABSButton1_Click"></Button>
             <Button x:Name="LABSButton2" Style="{StaticResource LABSButton}" FontSize="14" Content="GitHub" Width="82" Height="Auto" Margin="7" Cursor="Hand" Click="LABSButton2_Click"></Button>
             <local:TestButton Content="Test" extensions:CornerRadiusExtension.CornerRadius="5" Height="35" Margin="7,7,7,7.6" Width="28"/>
         </StackPanel>
 
-        <StackPanel VerticalAlignment="Top" Margin="0,47,0.2,-0.4" Height="255" Grid.RowSpan="2">
-            <local:TestButton extensions:CornerRadiusExtension.CornerRadius="5" Content="LeoCorpLibrary" Margin="7,7,426.2,7" Height="34" Click="TestButton_Click"></local:TestButton>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="205" Margin="0,0.4,0.2,0" Grid.Row="2" Grid.RowSpan="2">
+            <local:TestButton extensions:CornerRadiusExtension.CornerRadius="5" Content="LeoCorpLibrary" Width="100" Click="TestButton_Click" VerticalAlignment="Top"></local:TestButton>
+            <local:TestButton extensions:CornerRadiusExtension.CornerRadius="5" Content="UserControlAdd" Width="120" VerticalAlignment="Top" Click="TestButton_Click_1"/>
         </StackPanel>
     </Grid>
 </Window>
