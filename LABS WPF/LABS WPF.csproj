@@ -64,9 +64,19 @@
     <Compile Include="Classes\Definitions.cs" />
     <Compile Include="Extensions\CornerRadiusExtension.cs" />
     <Compile Include="TestButton.cs" />
+    <Compile Include="UserControls\TestUC.xaml.cs">
+      <DependentUpon>TestUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\LeoCorpLibrary.xaml.cs">
       <DependentUpon>LeoCorpLibrary.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\UserControlAdd.xaml.cs">
+      <DependentUpon>UserControlAdd.xaml</DependentUpon>
+    </Compile>
+    <Page Include="UserControls\TestUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\About.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -91,6 +101,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\LeoCorpLibrary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\UserControlAdd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -131,5 +145,6 @@
   <ItemGroup>
     <Resource Include="Logo.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
