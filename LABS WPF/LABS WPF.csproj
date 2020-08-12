@@ -63,6 +63,7 @@
     </ApplicationDefinition>
     <Compile Include="Classes\Definitions.cs" />
     <Compile Include="Extensions\CornerRadiusExtension.cs" />
+    <Compile Include="ImageButton.cs" />
     <Compile Include="TestButton.cs" />
     <Compile Include="UserControls\TestUC.xaml.cs">
       <DependentUpon>TestUC.xaml</DependentUpon>
@@ -145,6 +146,8 @@
   <ItemGroup>
     <Resource Include="Logo.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Themes\Logo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
