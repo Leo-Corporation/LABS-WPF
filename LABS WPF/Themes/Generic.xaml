@@ -3,7 +3,37 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:extensions="clr-namespace:LABS_WPF.Extensions"
     xmlns:local="clr-namespace:LABS_WPF">
-    
+
+    <Style TargetType="{x:Type local:ImageButton}" BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush>
+                    <GradientStop Color="#FF4600FF"/>
+                    <GradientStop Color="#FF8000FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="MinWidth" Value="50"/>
+        <Setter Property="Height" Value="22"/>
+        <Setter Property="Margin" Value="7"/>
+        <Setter Property="Padding" Value="5"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:ImageButton">
+                    <Border Padding="5" Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0" CornerRadius="{TemplateBinding extensions:CornerRadiusExtension.CornerRadius}">
+                        
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Image Source="Logo.png" Height="{TemplateBinding Height}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,4,0"/>
+                            <TextBlock FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <ContentPresenter VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
     <Style TargetType = "{x:Type local:TestButton}"
       BasedOn = "{StaticResource {x:Type Button}}">
