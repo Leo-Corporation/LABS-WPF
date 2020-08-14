@@ -26,7 +26,7 @@
                     <Border Padding="5" Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0" CornerRadius="{TemplateBinding extensions:CornerRadiusExtension.CornerRadius}">
                         
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <Image Source="Logo.png" Height="{TemplateBinding Height}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,4,0"/>
+                            <Image Source="{TemplateBinding extensions:ImageSourceExtension.ImageSource}" Height="auto" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,4,0"/>
                             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             <ContentPresenter VerticalAlignment="Center"/>
                         </StackPanel>
@@ -34,6 +34,20 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+
+        <!-- Lors du survol -->
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <LinearGradientBrush>
+                            <GradientStop Color="#FF3A00FF"/>
+                            <GradientStop Color="#FF0080FF" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
     </Style>
 
     <Style TargetType = "{x:Type local:TestButton}"
