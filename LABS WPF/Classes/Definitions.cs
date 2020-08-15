@@ -42,6 +42,6 @@ namespace LABS_WPF.Classes
         /// <summary>
         /// URL du dépôt GitHub.
         /// </summary>
-        public static readonly string GitHubRepoUrl = "https://github.com";
+        public static readonly string GitHubRepoUrl = "https://github.com/Leo-Corporation/LABS-WPF";
     }
 }
