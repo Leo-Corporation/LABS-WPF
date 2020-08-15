@@ -51,7 +51,7 @@ namespace LABS_WPF.Windows
         private void TestButton_Click(object sender, RoutedEventArgs e)
         {
             TestUC testUC = new TestUC();
-            StackPanel2.Children.Add(testUC);
+            WrapPanel1.Children.Add(testUC);
         }
     }
 }
