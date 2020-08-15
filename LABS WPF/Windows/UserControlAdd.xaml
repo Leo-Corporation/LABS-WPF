@@ -11,12 +11,16 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="285"/>
+            <RowDefinition Height="285*"/>
         </Grid.RowDefinitions>
         <StackPanel x:Name="StackPanel" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0" Height="50">
             <local:TestButton x:Name="button1" Content="Ajouter" extensions:CornerRadiusExtension.CornerRadius="5" Click="TestButton_Click"/>
+            <StackPanel.Effect>
+                <DropShadowEffect BlurRadius="10" Opacity="0.6" ShadowDepth="1" Color="#FF7900FF"/>
+            </StackPanel.Effect>
         </StackPanel>
-
-        <StackPanel x:Name="StackPanel2" FlowDirection="LeftToRight" CanHorizontallyScroll="True" CanVerticallyScroll="True" Orientation="Vertical" Grid.Row="2"/>
+        <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+            <WrapPanel Name="WrapPanel1" Orientation="Horizontal" HorizontalAlignment="Left"></WrapPanel>
+        </ScrollViewer>
     </Grid>
 </Window>
