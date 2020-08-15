@@ -9,14 +9,12 @@
         Title="LABS WPF" Height="331" Width="538" WindowStartupLocation="CenterScreen" Icon="Logo.png" WindowStyle="SingleBorderWindow">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="25*"/>
-            <RowDefinition Height="126*"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <StackPanel  Orientation="Horizontal" Height="50" VerticalAlignment="Top" Panel.ZIndex="1" Margin="0,0,0.2,0" Grid.RowSpan="1">
-            <Button x:Name="LABSButton1" Style="{StaticResource LABSButton}" FontSize="14" Content="A propos" Width="82" Height="Auto" Margin="7" Cursor="Hand" Click="LABSButton1_Click"></Button>
-            <Button x:Name="LABSButton2" Style="{StaticResource LABSButton}" FontSize="14" Content="GitHub" Width="82" Height="Auto" Margin="7" Cursor="Hand" Click="LABSButton2_Click"></Button>
-            <local:TestButton Content="Test" extensions:CornerRadiusExtension.CornerRadius="5" Height="35" Margin="7,7,7,7.6" Width="28"/>
-            <local:ImageButton Content="Image" Height="Auto" Margin="7" extensions:CornerRadiusExtension.CornerRadius="5" extensions:ImageSourceExtension.ImageSource="Images\home white.png"/>
+            <local:ImageButton Content="A propos" Height="Auto" Margin="7" extensions:CornerRadiusExtension.CornerRadius="5" extensions:ImageSourceExtension.ImageSource="Images\about white.png" Click="LABSButton1_Click" Cursor="Hand"/>
+            <local:ImageButton Content="GitHub" Height="Auto" Margin="7" extensions:CornerRadiusExtension.CornerRadius="5" extensions:ImageSourceExtension.ImageSource="Images\branch.png" Click="LABSButton2_Click" Cursor="Hand"/>
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="205" Margin="0,0.4,0.2,0" Grid.Row="2" Grid.RowSpan="2">
