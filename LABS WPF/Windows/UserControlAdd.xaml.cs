@@ -74,5 +74,11 @@ namespace LABS_WPF.Windows
         {
             Definitions.UserControlAdd = this;
         }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            WrapPanel1.Children.Clear();
+            WrapPanel1.Children.Add(add);
+        }
     }
 }
