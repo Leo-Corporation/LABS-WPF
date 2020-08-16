@@ -5,9 +5,15 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:LABS_WPF.UserControls"
              mc:Ignorable="d" Height="84.312" Width="109.255">
-    <Border Margin="3" BorderBrush="Black" BorderThickness="1">
+    <Border Margin="3" BorderBrush="Black" BorderThickness="0" CornerRadius="10">
+        <Border.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="#FF4600FF"/>
+                <GradientStop Color="#FF8000FF" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
         <Grid>
-            <TextBlock x:Name="TextBlock" Text="Test" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock FontWeight="Bold" Foreground="White" x:Name="TextBlock" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Grid>
     </Border>
 </UserControl>
