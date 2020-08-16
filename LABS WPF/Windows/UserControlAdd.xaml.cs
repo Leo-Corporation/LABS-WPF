@@ -34,6 +34,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using LABS_WPF.Classes;
 using LABS_WPF.UserControls;
 
 namespace LABS_WPF.Windows
@@ -43,15 +44,35 @@ namespace LABS_WPF.Windows
     /// </summary>
     public partial class UserControlAdd : Window
     {
+        AddUC add = new AddUC();
         public UserControlAdd()
         {
             InitializeComponent();
+            WrapPanel1.Children.Add(add);
         }
 
         private void TestButton_Click(object sender, RoutedEventArgs e)
         {
+            Definitions.UserControlAdd = this;
+            AddUC();
+        }
+
+        internal void AddUC()
+        {
             TestUC testUC = new TestUC();
             WrapPanel1.Children.Add(testUC);
+            WrapPanel1.Children.Remove(add);
+            WrapPanel1.Children.Add(add);
+        }
+
+        private void Window_GotFocus(object sender, RoutedEventArgs e)
+        {
+            Definitions.UserControlAdd = this;
+        }
+
+        private void Window_Activated(object sender, EventArgs e)
+        {
+            Definitions.UserControlAdd = this;
         }
     }
 }

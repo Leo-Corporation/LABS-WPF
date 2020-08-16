@@ -7,7 +7,7 @@
         xmlns:extensions="clr-namespace:LABS_WPF.Extensions"
         xmlns:local="clr-namespace:LABS_WPF"
         mc:Ignorable="d"
-        Title="UserControlAdd - LABS WPF" Height="331" Width="538" WindowStartupLocation="CenterScreen" Icon="Logo.png">
+        Title="UserControlAdd - LABS WPF" Height="331" Width="538" WindowStartupLocation="CenterScreen" Icon="Logo.png" GotFocus="Window_GotFocus" Activated="Window_Activated">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
