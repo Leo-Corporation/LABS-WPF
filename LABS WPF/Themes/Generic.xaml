@@ -46,6 +46,12 @@
                         </LinearGradientBrush>
                     </Setter.Value>
                 </Setter>
+
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <DropShadowEffect Opacity="0.4" ShadowDepth="0" BlurRadius="10" Color="#FF6400FF"/>
+                    </Setter.Value>
+                </Setter>
             </Trigger>
         </Style.Triggers>
     </Style>
@@ -88,6 +94,11 @@
                             <GradientStop Color="#FF0039CA"/>
                             <GradientStop Color="#FF6600C5" Offset="1"/>
                         </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <DropShadowEffect Opacity="0.3" ShadowDepth="0" BlurRadius="10" Color="#FF6400FF"/>
                     </Setter.Value>
                 </Setter>
             </Trigger>
