@@ -66,6 +66,9 @@
     <Compile Include="Extensions\ImageSourceExtension.cs" />
     <Compile Include="ImageButton.cs" />
     <Compile Include="TestButton.cs" />
+    <Compile Include="UserControls\AddUC.xaml.cs">
+      <DependentUpon>AddUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\TestUC.xaml.cs">
       <DependentUpon>TestUC.xaml</DependentUpon>
     </Compile>
@@ -75,6 +78,10 @@
     <Compile Include="Windows\UserControlAdd.xaml.cs">
       <DependentUpon>UserControlAdd.xaml</DependentUpon>
     </Compile>
+    <Page Include="UserControls\AddUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\TestUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -160,6 +167,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\branch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\about white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\add.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
