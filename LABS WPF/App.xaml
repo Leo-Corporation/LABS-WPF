@@ -12,7 +12,7 @@
             <Setter Property="Text" Value="LinkTextBlock"/>
             <Setter Property="Cursor" Value="Hand"/>
         </Style>
-        
+
         <Style x:Key="LABSButton" TargetType="{x:Type Button}">
             <Setter Property="Background">
                 <Setter.Value>
@@ -131,22 +131,22 @@
                                 <Setter Property="Padding" Value="4,-1,0,0"/>
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
-                                <Setter Property="Background" TargetName="checkBoxBorder" Value="{StaticResource OptionMark.MouseOver.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="{StaticResource OptionMark.MouseOver.Border}"/>
                                 <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource OptionMark.MouseOver.Glyph}"/>
                                 <Setter Property="Fill" TargetName="indeterminateMark" Value="{StaticResource OptionMark.MouseOver.Glyph}"/>
+                                <Setter Property="Background" TargetName="checkBoxBorder" Value="{x:Null}"/>
+                                <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="#FFC3C3C3"/>
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="false">
-                                <Setter Property="Background" TargetName="checkBoxBorder" Value="{StaticResource OptionMark.Disabled.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="{StaticResource OptionMark.Disabled.Border}"/>
                                 <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource OptionMark.Disabled.Glyph}"/>
                                 <Setter Property="Fill" TargetName="indeterminateMark" Value="{StaticResource OptionMark.Disabled.Glyph}"/>
+                                <Setter Property="Background" TargetName="checkBoxBorder" Value="{x:Null}"/>
+                                <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="#FFFFC8C8"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
-                                <Setter Property="Background" TargetName="checkBoxBorder" Value="{StaticResource OptionMark.Pressed.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="{StaticResource OptionMark.Pressed.Border}"/>
                                 <Setter Property="Fill" TargetName="optionMark" Value="{StaticResource OptionMark.Pressed.Glyph}"/>
                                 <Setter Property="Fill" TargetName="indeterminateMark" Value="{StaticResource OptionMark.Pressed.Glyph}"/>
+                                <Setter Property="Background" TargetName="checkBoxBorder" Value="{x:Null}"/>
+                                <Setter Property="BorderBrush" TargetName="checkBoxBorder" Value="{DynamicResource OptionMark.Disabled.Background}"/>
                             </Trigger>
                             <Trigger Property="IsChecked" Value="true">
                                 <Setter Property="Opacity" TargetName="optionMark" Value="1"/>
@@ -155,6 +155,13 @@
                             <Trigger Property="IsChecked" Value="{x:Null}">
                                 <Setter Property="Opacity" TargetName="optionMark" Value="0"/>
                                 <Setter Property="Opacity" TargetName="indeterminateMark" Value="1"/>
+                                <Setter Property="Fill" TargetName="indeterminateMark">
+                                    <Setter.Value>
+                                        <SolidColorBrush Color="White" Opacity="0.995"/>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="RadiusX" TargetName="indeterminateMark" Value="3"/>
+                                <Setter Property="RadiusY" TargetName="indeterminateMark" Value="3"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
