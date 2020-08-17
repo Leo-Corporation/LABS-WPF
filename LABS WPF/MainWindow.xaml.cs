@@ -92,5 +92,10 @@ namespace LABS_WPF
         {
             new Windows.UserControlAdd().Show();
         }
+
+        private void TestButton_Click_2(object sender, RoutedEventArgs e)
+        {
+            new NoBorderWindow().Show();
+        }
     }
 }
