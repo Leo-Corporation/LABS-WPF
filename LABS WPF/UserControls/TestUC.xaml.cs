@@ -62,5 +62,13 @@ namespace LABS_WPF.UserControls
             string second = DateTime.Now.Second.ToString();
             TextBlock.Text = $"{hour}:{minute}:{second}";
         }
+
+        private void UserControl_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (CheckBox1.Visibility != Visibility.Hidden)
+            {
+                CheckBox1.IsChecked = !CheckBox1.IsChecked;
+            }
+        }
     }
 }
