@@ -80,5 +80,55 @@ namespace LABS_WPF.Windows
             WrapPanel1.Children.Clear();
             WrapPanel1.Children.Add(add);
         }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                for (int i = 0; i < WrapPanel1.Children.Count; i++)
+                {
+                    if (WrapPanel1.Children[i] is TestUC)
+                    {
+                        TestUC testUC = (TestUC)WrapPanel1.Children[i];
+                        testUC.CheckBox1.Visibility = Visibility.Visible;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message); // Afficher une erreur
+            }
+            
+        }
+
+        private void button4_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                List<TestUC> testUCs = new List<TestUC>();
+                UIElementCollection uIElementCollection = WrapPanel1.Children;
+
+                foreach (UIElement uIElement in uIElementCollection)
+                {
+                    if (uIElement is TestUC)
+                    {
+                        TestUC testUC = (TestUC)uIElement;
+                        if ((bool)testUC.CheckBox1.IsChecked)
+                        {
+                            testUCs.Add(testUC);
+                        }
+                    }
+                }
+
+                foreach (TestUC testUC1 in testUCs)
+                {
+                    WrapPanel1.Children.Remove(testUC1);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

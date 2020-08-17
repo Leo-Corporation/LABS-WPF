@@ -16,6 +16,8 @@
         <StackPanel x:Name="StackPanel" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0" Height="50">
             <local:TestButton x:Name="button1" Content="Ajouter" extensions:CornerRadiusExtension.CornerRadius="5" Click="TestButton_Click"/>
             <local:TestButton x:Name="button2" Content="Effacer" extensions:CornerRadiusExtension.CornerRadius="5" Click="button2_Click"/>
+            <local:TestButton x:Name="button3" Content="Selection" Width="70" extensions:CornerRadiusExtension.CornerRadius="5" Click="button3_Click"/>
+            <local:TestButton x:Name="button4" Content="Supprimer" Width="80" extensions:CornerRadiusExtension.CornerRadius="5" Click="button4_Click"/>
         </StackPanel>
         <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
             <WrapPanel Name="WrapPanel1" Orientation="Horizontal" HorizontalAlignment="Left"></WrapPanel>
