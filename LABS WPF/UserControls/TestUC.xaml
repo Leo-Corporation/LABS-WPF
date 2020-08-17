@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:LABS_WPF.UserControls"
-             mc:Ignorable="d" Height="84.312" Width="109.255">
+             mc:Ignorable="d" Height="84.312" Width="109.255" MouseLeftButtonDown="UserControl_MouseLeftButtonDown">
     <Border Margin="3" BorderBrush="Black" BorderThickness="0" CornerRadius="10">
         <Border.Background>
             <LinearGradientBrush>
@@ -14,7 +14,7 @@
         </Border.Background>
         <Grid>
             <TextBlock FontWeight="Bold" Foreground="White" x:Name="TextBlock" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <CheckBox Margin="5 5 0 0" Background="Transparent" BorderBrush="White" BorderThickness="1" Height="20" Width="20" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{DynamicResource CheckBoxStyle1}"/>
+            <CheckBox x:Name="CheckBox1" x:FieldModifier="public" Margin="5 5 0 0" Background="Transparent" BorderBrush="White" BorderThickness="1" Height="20" Width="20" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{DynamicResource CheckBoxStyle1}" Visibility="Hidden"/>
         </Grid>
     </Border>
 </UserControl>
