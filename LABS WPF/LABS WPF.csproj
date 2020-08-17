@@ -75,6 +75,9 @@
     <Compile Include="Windows\LeoCorpLibrary.xaml.cs">
       <DependentUpon>LeoCorpLibrary.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\NoBorderWindow.xaml.cs">
+      <DependentUpon>NoBorderWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\UserControlAdd.xaml.cs">
       <DependentUpon>UserControlAdd.xaml</DependentUpon>
     </Compile>
@@ -110,6 +113,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\LeoCorpLibrary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\NoBorderWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
