@@ -38,11 +38,12 @@
     <ApplicationIcon>Logo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LeoCorpLibrary, Version=1.8.1.2007, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\LeoCorpLibrary.1.8.1.2007\lib\net472\LeoCorpLibrary.dll</HintPath>
+    <Reference Include="LeoCorpLibrary, Version=2.0.0.2008, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LeoCorpLibrary.2.0.0.2008\lib\net472\LeoCorpLibrary.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
