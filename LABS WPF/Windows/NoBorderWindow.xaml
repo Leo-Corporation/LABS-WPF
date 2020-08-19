@@ -237,7 +237,7 @@
                 </Grid>
             </Border>
             <StackPanel VerticalAlignment="Top" Orientation="Horizontal" Grid.Row="1">
-                <TextBox Width="60" Margin="5" Style="{DynamicResource TextBoxStyle1}"></TextBox>
+                <TextBox Width="60" Margin="5" Style="{DynamicResource TextBoxStyle1}" Height="24"></TextBox>
             </StackPanel>
         </Grid>
     </Border>
