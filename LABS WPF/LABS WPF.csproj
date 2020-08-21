@@ -79,6 +79,9 @@
     <Compile Include="Windows\NoBorderWindow.xaml.cs">
       <DependentUpon>NoBorderWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\ScrollWindow.xaml.cs">
+      <DependentUpon>ScrollWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\UserControlAdd.xaml.cs">
       <DependentUpon>UserControlAdd.xaml</DependentUpon>
     </Compile>
@@ -118,6 +121,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\NoBorderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ScrollWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

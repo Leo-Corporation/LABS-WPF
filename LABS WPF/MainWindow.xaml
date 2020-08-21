@@ -21,6 +21,7 @@
             <local:TestButton extensions:CornerRadiusExtension.CornerRadius="5" Content="LeoCorpLibrary" Width="100" Click="TestButton_Click" VerticalAlignment="Top"></local:TestButton>
             <local:TestButton extensions:CornerRadiusExtension.CornerRadius="5" Content="UserControlAdd" Width="120" VerticalAlignment="Top" Click="TestButton_Click_1"/>
             <local:TestButton extensions:CornerRadiusExtension.CornerRadius="5" Content="NoBorderWindows" Width="120" VerticalAlignment="Top" Click="TestButton_Click_2"/>
+            <local:TestButton extensions:CornerRadiusExtension.CornerRadius="5" Content="ScrollWindow" Width="90" VerticalAlignment="Top" Click="TestButton_Click_3"></local:TestButton>
         </StackPanel>
     </Grid>
 </Window>

@@ -97,5 +97,10 @@ namespace LABS_WPF
         {
             new NoBorderWindow().Show();
         }
+
+        private void TestButton_Click_3(object sender, RoutedEventArgs e)
+        {
+            new ScrollWindow().Show();
+        }
     }
 }
