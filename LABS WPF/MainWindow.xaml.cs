@@ -49,6 +49,7 @@ namespace LABS_WPF
         public MainWindow()
         {
             InitializeComponent();
+            LeoCorpLibrary.Update.GetLastVersion("https://bing.com");
         }
 
         /// <summary>

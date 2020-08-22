@@ -192,5 +192,8 @@
   <ItemGroup>
     <Resource Include="UserControls\add.png" />
   </ItemGroup>
+  <ItemGroup>
+    <SplashScreen Include="SplashScreen1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
