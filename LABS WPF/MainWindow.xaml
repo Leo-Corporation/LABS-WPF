@@ -7,14 +7,14 @@
         xmlns:local="clr-namespace:LABS_WPF"
         xmlns:extensions="clr-namespace:LABS_WPF.Extensions"
         mc:Ignorable="d"
-        Title="LABS WPF" Height="331" Width="538" WindowStartupLocation="CenterScreen" Icon="Logo.png" WindowStyle="SingleBorderWindow">
+        Title="{x:Static prop:Resources.Title}" Height="331" Width="538" WindowStartupLocation="CenterScreen" Icon="Logo.png" WindowStyle="SingleBorderWindow">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <StackPanel  Orientation="Horizontal" Height="50" VerticalAlignment="Top" Panel.ZIndex="1" Margin="0,0,0.2,0" Grid.RowSpan="1">
-            <local:ImageButton Content="{x:Static prop:Resources.Title}" Height="Auto" Margin="7" extensions:CornerRadiusExtension.CornerRadius="5" extensions:ImageSourceExtension.ImageSource="Images\about white.png" Click="LABSButton1_Click" Cursor="Hand"/>
+            <local:ImageButton Content="A propos" Height="Auto" Margin="7" extensions:CornerRadiusExtension.CornerRadius="5" extensions:ImageSourceExtension.ImageSource="Images\about white.png" Click="LABSButton1_Click" Cursor="Hand"/>
             <local:ImageButton Content="GitHub" Height="Auto" Margin="7" extensions:CornerRadiusExtension.CornerRadius="5" extensions:ImageSourceExtension.ImageSource="Images\branch.png" Click="LABSButton2_Click" Cursor="Hand"/>
         </StackPanel>
 

@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -48,8 +49,10 @@ namespace LABS_WPF
     {
         public MainWindow()
         {
+            //Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-US");
             InitializeComponent();
             LeoCorpLibrary.Update.GetLastVersion("https://bing.com");
+
         }
 
         /// <summary>
