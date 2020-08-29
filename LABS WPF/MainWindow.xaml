@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:prop="clr-namespace:LABS_WPF.Properties"
         xmlns:local="clr-namespace:LABS_WPF"
         xmlns:extensions="clr-namespace:LABS_WPF.Extensions"
         mc:Ignorable="d"
@@ -13,7 +14,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <StackPanel  Orientation="Horizontal" Height="50" VerticalAlignment="Top" Panel.ZIndex="1" Margin="0,0,0.2,0" Grid.RowSpan="1">
-            <local:ImageButton Content="A propos" Height="Auto" Margin="7" extensions:CornerRadiusExtension.CornerRadius="5" extensions:ImageSourceExtension.ImageSource="Images\about white.png" Click="LABSButton1_Click" Cursor="Hand"/>
+            <local:ImageButton Content="{x:Static prop:Resources.Title}" Height="Auto" Margin="7" extensions:CornerRadiusExtension.CornerRadius="5" extensions:ImageSourceExtension.ImageSource="Images\about white.png" Click="LABSButton1_Click" Cursor="Hand"/>
             <local:ImageButton Content="GitHub" Height="Auto" Margin="7" extensions:CornerRadiusExtension.CornerRadius="5" extensions:ImageSourceExtension.ImageSource="Images\branch.png" Click="LABSButton2_Click" Cursor="Hand"/>
         </StackPanel>
 
