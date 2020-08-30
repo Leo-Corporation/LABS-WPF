@@ -18,11 +18,12 @@
             <local:ImageButton Content="GitHub" Height="Auto" Margin="7" extensions:CornerRadiusExtension.CornerRadius="5" extensions:ImageSourceExtension.ImageSource="Images\branch.png" Click="LABSButton2_Click" Cursor="Hand"/>
         </StackPanel>
 
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="205" Margin="0,0.4,0.2,0" Grid.Row="2" Grid.RowSpan="2">
+        <WrapPanel Orientation="Horizontal" VerticalAlignment="Top" Height="205" Margin="0,0.4,0.2,0" Grid.Row="2" Grid.RowSpan="2">
             <local:TestButton extensions:CornerRadiusExtension.CornerRadius="5" Content="LeoCorpLibrary" Width="100" Click="TestButton_Click" VerticalAlignment="Top"></local:TestButton>
             <local:TestButton extensions:CornerRadiusExtension.CornerRadius="5" Content="UserControlAdd" Width="120" VerticalAlignment="Top" Click="TestButton_Click_1"/>
             <local:TestButton extensions:CornerRadiusExtension.CornerRadius="5" Content="NoBorderWindows" Width="120" VerticalAlignment="Top" Click="TestButton_Click_2"/>
             <local:TestButton extensions:CornerRadiusExtension.CornerRadius="5" Content="ScrollWindow" Width="90" VerticalAlignment="Top" Click="TestButton_Click_3"></local:TestButton>
-        </StackPanel>
+            <local:TestButton extensions:CornerRadiusExtension.CornerRadius="5" Content="BluredWindow" Width="90" VerticalAlignment="Top" Click="TestButton_Click_4"></local:TestButton>
+        </WrapPanel>
     </Grid>
 </Window>

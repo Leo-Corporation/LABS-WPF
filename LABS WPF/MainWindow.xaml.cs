@@ -106,5 +106,10 @@ namespace LABS_WPF
         {
             new ScrollWindow().Show();
         }
+
+        private void TestButton_Click_4(object sender, RoutedEventArgs e)
+        {
+            new BluredWindow().Show();
+        }
     }
 }
