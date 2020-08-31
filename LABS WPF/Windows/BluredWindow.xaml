@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:LABS_WPF.Windows"
         mc:Ignorable="d"
         Title="BluredWindow" AllowsTransparency="True" Background="Transparent" WindowStyle="None" Height="450" Width="800">
@@ -15,6 +16,52 @@
         <Border.Effect>
             <DropShadowEffect BlurRadius="20" ShadowDepth="0" Opacity="0.4" RenderingBias="Quality"/>
         </Border.Effect>
-        <TextBlock Text="A" FontSize="50" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        <Grid>
+            <Button Name="MenuButton" Width="150" Height="50" Content="Button w/ ContextMenu">
+                <Button.ContextMenu>
+                    <ContextMenu BorderBrush="#FF323248" BorderThickness="0" Padding="0" Background="#FF323248" x:Name="MainContextMenu" PlacementRectangle="{Binding RelativeSource={RelativeSource Self}}">
+                        <MenuItem Header="Test" Background="#FF323248" Foreground="White">
+                            <MenuItem.Icon>
+                                <Image Source="Logo.png"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="About" Background="#FF323248" Foreground="White">
+                            <MenuItem.Icon>
+                                <Image Source="Logo.png"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Settings" Background="#FF323248" Foreground="White">
+                            <MenuItem.Icon>
+                                <Image Source="Logo.png"/>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </ContextMenu>
+                </Button.ContextMenu>
+
+                <Button.ToolTip>
+                    <ToolTip Background="#FF323248" BorderBrush="{x:Null}" Foreground="White">
+                        <TextBlock Text="Button w/ ContextMenu"/>
+                    </ToolTip>
+                </Button.ToolTip>
+
+                <Button.Triggers>
+                    <EventTrigger SourceName="MenuButton" RoutedEvent="Button.Click">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MainContextMenu" Storyboard.TargetProperty="(ContextMenu.IsOpen)">
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                        <DiscreteObjectKeyFrame.Value>
+                                            <sys:Boolean>True</sys:Boolean>
+                                        </DiscreteObjectKeyFrame.Value>
+                                    </DiscreteObjectKeyFrame>
+                                </ObjectAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Button.Triggers>
+            </Button>
+        </Grid>
+
     </Border>
 </Window>
