@@ -89,6 +89,9 @@
     <Compile Include="Windows\LeoCorpLibrary.xaml.cs">
       <DependentUpon>LeoCorpLibrary.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\MaximizeWindow.xaml.cs">
+      <DependentUpon>MaximizeWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\NoBorderWindow.xaml.cs">
       <DependentUpon>NoBorderWindow.xaml</DependentUpon>
     </Compile>
@@ -134,6 +137,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\LeoCorpLibrary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MaximizeWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

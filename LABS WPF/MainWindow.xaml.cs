@@ -111,5 +111,10 @@ namespace LABS_WPF
         {
             new BluredWindow().Show();
         }
+
+        private void TestButton_Click_5(object sender, RoutedEventArgs e)
+        {
+            new MaximizeWindow().Show();
+        }
     }
 }
