@@ -116,5 +116,10 @@ namespace LABS_WPF
         {
             new MaximizeWindow().Show();
         }
+
+        private void TestButton_Click_6(object sender, RoutedEventArgs e)
+        {
+            new DownloadFileWPF().Show();
+        }
     }
 }

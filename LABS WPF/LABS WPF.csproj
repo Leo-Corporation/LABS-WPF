@@ -86,6 +86,9 @@
     <Compile Include="Windows\BluredWindow.xaml.cs">
       <DependentUpon>BluredWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\DownloadFileWPF.xaml.cs">
+      <DependentUpon>DownloadFileWPF.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\LeoCorpLibrary.xaml.cs">
       <DependentUpon>LeoCorpLibrary.xaml</DependentUpon>
     </Compile>
@@ -133,6 +136,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\BluredWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\DownloadFileWPF.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
