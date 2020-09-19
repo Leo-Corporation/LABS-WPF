@@ -121,5 +121,10 @@ namespace LABS_WPF
         {
             new DownloadFileWPF().Show();
         }
+
+        private void TestButton_Click_7(object sender, RoutedEventArgs e)
+        {
+            LeoCorpLibrary.Update.Check(Definitions.Version, Definitions.Version + "-test", new About(), new UserControlAdd());
+        }
     }
 }
