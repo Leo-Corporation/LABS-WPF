@@ -27,6 +27,7 @@
             <local:TestButton extensions:CornerRadiusExtension.CornerRadius="5" Content="Maximize" Width="90" VerticalAlignment="Top" Click="TestButton_Click_5"></local:TestButton>
             <local:TestButton extensions:CornerRadiusExtension.CornerRadius="5" Content="DownloadFileWPF" Width="120" VerticalAlignment="Top" Click="TestButton_Click_6"></local:TestButton>
             <local:TestButton extensions:CornerRadiusExtension.CornerRadius="5" Content="Update System" Width="110" VerticalAlignment="Top" Click="TestButton_Click_7"></local:TestButton>
+            <local:TestButton extensions:CornerRadiusExtension.CornerRadius="5" Content="Bar chart" Width="110" VerticalAlignment="Top" Click="TestButton_Click_8"></local:TestButton>
         </WrapPanel>
     </Grid>
 </Window>

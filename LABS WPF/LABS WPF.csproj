@@ -80,8 +80,14 @@
     <Compile Include="UserControls\AddUC.xaml.cs">
       <DependentUpon>AddUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\BarChart.xaml.cs">
+      <DependentUpon>BarChart.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\TestUC.xaml.cs">
       <DependentUpon>TestUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\BarChartWindow.xaml.cs">
+      <DependentUpon>BarChartWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\BluredWindow.xaml.cs">
       <DependentUpon>BluredWindow.xaml</DependentUpon>
@@ -105,6 +111,10 @@
       <DependentUpon>UserControlAdd.xaml</DependentUpon>
     </Compile>
     <Page Include="UserControls\AddUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\BarChart.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -134,6 +144,10 @@
     <Page Include="Themes\Generic.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\BarChartWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\BluredWindow.xaml">
       <SubType>Designer</SubType>

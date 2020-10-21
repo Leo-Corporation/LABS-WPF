@@ -126,5 +126,10 @@ namespace LABS_WPF
         {
             LeoCorpLibrary.Update.Check(Definitions.Version, Definitions.Version + "-test", new About(), new UserControlAdd());
         }
+
+        private void TestButton_Click_8(object sender, RoutedEventArgs e)
+        {
+            new BarChartWindow().Show();
+        }
     }
 }
