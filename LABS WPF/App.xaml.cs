@@ -28,6 +28,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Shell;
 
 namespace LABS_WPF
 {
@@ -36,5 +37,31 @@ namespace LABS_WPF
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            //base.OnStartup(e);
+
+            if (e.Args.Length > 0)
+            {
+                MessageBox.Show("Test");
+                Shutdown();
+            }
+
+            JumpTask jumpTask = new JumpTask
+            {
+                Title = "This is a test",
+                Description = "A test jump list.",
+                IconResourcePath = System.Reflection.Assembly.GetEntryAssembly().CodeBase,
+                ApplicationPath = System.Reflection.Assembly.GetEntryAssembly().CodeBase,
+                Arguments = "/test"
+            };
+
+            JumpList jumpList = new JumpList();
+            jumpList.JumpItems.Add(jumpTask);
+            jumpList.ShowFrequentCategory = false;
+            jumpList.ShowRecentCategory = false;
+
+            JumpList.SetJumpList(Current, jumpList);
+        }
     }
 }
