@@ -62,6 +62,8 @@ namespace LABS_WPF
             jumpList.ShowRecentCategory = false;
 
             JumpList.SetJumpList(Current, jumpList);
+
+            // Open another window: new Windows.About().Show();
         }
     }
 }
