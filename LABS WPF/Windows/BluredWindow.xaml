@@ -6,7 +6,7 @@
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:LABS_WPF.Windows"
         mc:Ignorable="d"
-        Title="BluredWindow" AllowsTransparency="True" Background="Transparent" WindowStyle="None" Height="450" Width="800">
+        Title="BluredWindow" AllowsTransparency="True" Background="Transparent" WindowStyle="None" Height="450" Width="800" Icon="/LABS WPF;component/Logo.png">
 
     <WindowChrome.WindowChrome>
         <WindowChrome ResizeBorderThickness="2" CaptionHeight="50"></WindowChrome>

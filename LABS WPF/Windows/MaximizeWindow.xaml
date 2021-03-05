@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LABS_WPF.Windows"
-        mc:Ignorable="d"
+        mc:Ignorable="d" Icon="/LABS WPF;component/Logo.png"
         Title="MaximizeWindow" WindowStyle="None" Height="450" Width="800" LocationChanged="Window_LocationChanged" SizeChanged="Window_SizeChanged">
 
     <WindowChrome.WindowChrome>

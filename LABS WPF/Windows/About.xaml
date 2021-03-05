@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LABS_WPF.Windows"
         mc:Ignorable="d"
-        Title="A propos - LABS WPF" Height="312" Width="449" WindowStartupLocation="CenterScreen" Icon="Logo.png" WindowStyle="SingleBorderWindow" MinHeight="208" MinWidth="208" Loaded="Window_Loaded">
+        Title="A propos - LABS WPF" Height="312" Width="449" WindowStartupLocation="CenterScreen" Icon="/LABS WPF;component/Logo.png" WindowStyle="SingleBorderWindow" MinHeight="208" MinWidth="208" Loaded="Window_Loaded">
     <Grid>
         <Border Background="White" CornerRadius="10" Width="150" Height="160" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Border.Effect>

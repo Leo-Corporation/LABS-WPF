@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:LABS_WPF.Windows"
         xmlns:uc="clr-namespace:LABS_WPF.UserControls"
         mc:Ignorable="d"
-        Title="BarChartWindow" Height="450" Width="800">
+        Title="BarChartWindow" Height="450" Width="800" Icon="/LABS WPF;component/Logo.png">
     <Grid>
         <StackPanel Name="Content" Orientation="Horizontal">
             

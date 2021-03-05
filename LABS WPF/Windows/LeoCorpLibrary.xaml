@@ -7,7 +7,7 @@
         xmlns:windows="clr-namespace:LABS_WPF.Windows"
         xmlns:extensions="clr-namespace:LABS_WPF.Extensions"
         mc:Ignorable="d"
-        Title="LeoCorpLibrary - LABS WPF" Height="331" Width="538" WindowStartupLocation="CenterScreen" Icon="Logo.png">
+        Title="LeoCorpLibrary - LABS WPF" Height="331" Width="538" WindowStartupLocation="CenterScreen" Icon="/LABS WPF;component/Logo.png">
     <Grid>
         <StackPanel FlowDirection="LeftToRight" Orientation="Horizontal" VerticalAlignment="Top">
             <local:TestButton Content="Sum" extensions:CornerRadiusExtension.CornerRadius="5" Height="34" Width="102" Click="TestButton_Click"></local:TestButton>
