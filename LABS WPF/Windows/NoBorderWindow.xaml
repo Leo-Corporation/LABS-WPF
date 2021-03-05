@@ -236,8 +236,12 @@
                     </Button>
                 </Grid>
             </Border>
-            <StackPanel VerticalAlignment="Top" Orientation="Horizontal" Grid.Row="1">
-                <TextBox Width="60" Margin="5" Style="{DynamicResource TextBoxStyle1}" Height="24"></TextBox>
+            <StackPanel VerticalAlignment="Top" Grid.Row="1">
+                <TextBox Width="60" Margin="5" Style="{DynamicResource TextBoxStyle1}" Height="24" HorizontalAlignment="Left"></TextBox>
+                <PasswordBox x:Name="PasswordTxt"  Width="60" Height="24" Margin="5" HorizontalAlignment="Left"/>
+                <Button Content="Show Password" Click="Button_Click_2"/>
+
+                <Image Source="https://media.rawg.io/media/achievements/26e/26eabbf2e0b0b0f450cfd04dff816756.jpg" x:Name="img1" Width="50" Height="50" HorizontalAlignment="Left"/>
             </StackPanel>
         </Grid>
     </Border>

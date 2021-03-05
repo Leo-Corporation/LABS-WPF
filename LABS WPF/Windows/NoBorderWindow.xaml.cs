@@ -45,6 +45,13 @@ namespace LABS_WPF.Windows
         public NoBorderWindow()
         {
             InitializeComponent();
+            var image = new BitmapImage();
+            image.BeginInit();
+            image.UriSource = new Uri("https://media.rawg.io/media/achievements/189/189299bbae4d128e4c85b5e9c671f727.jpg");
+            image.DecodePixelWidth = 50;
+            image.EndInit();
+
+            img1.Source = image; // Set the image
         }
 
         private void minimize_Click(object sender, RoutedEventArgs e)
@@ -106,6 +113,11 @@ namespace LABS_WPF.Windows
         private void window_Loaded(object sender, RoutedEventArgs e)
         {
             RefreshMaximizeRestoreButton();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"Password: {PasswordTxt.Password}");
         }
     }
 }
