@@ -12,7 +12,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Léo Corporation")]
 [assembly: AssemblyProduct("LABS WPF")]
-[assembly: AssemblyCopyright("Copyright ©  2020")]
+[assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("Léo Corporation")]
 [assembly: AssemblyCulture("")]
 
