@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="LABS_WPF.UserControls.CustomItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LABS_WPF.UserControls"
+             mc:Ignorable="d" Background="White"
+             Height="50" d:DesignWidth="800">
+    <StackPanel Orientation="Horizontal">
+		<Image Source="https://media.rawg.io/media/games/997/997ab4d67e96fb20a4092383477d4463.jpg" Stretch="UniformToFill" StretchDirection="Both"/>
+		<TextBlock x:Name="text" Text="Some text here" Margin="10" VerticalAlignment="Center" FontSize="18" FontWeight="Bold"/>
+	</StackPanel>
+</UserControl>

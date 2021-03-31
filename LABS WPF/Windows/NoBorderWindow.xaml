@@ -242,7 +242,8 @@
                 <Button Content="Show Password" Click="Button_Click_2"/>
 
                 <Image Source="https://media.rawg.io/media/achievements/26e/26eabbf2e0b0b0f450cfd04dff816756.jpg" x:Name="img1" Width="50" Height="50" HorizontalAlignment="Left"/>
-            </StackPanel>
+				<ComboBox x:Name="Combobox" GotFocus="Combobox_GotFocus" IsTextSearchEnabled="True" IsEditable="True"/>
+			</StackPanel>
         </Grid>
     </Border>
 </Window>

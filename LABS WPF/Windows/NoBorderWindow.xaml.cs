@@ -21,6 +21,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. 
 */
+using LABS_WPF.UserControls;
+using LeoCorpLibrary;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,6 +54,11 @@ namespace LABS_WPF.Windows
             image.EndInit();
 
             img1.Source = image; // Set the image
+
+            for (int i = 0; i < 10; i++)
+			{
+                Combobox.Items.Add(new CustomItem(Password.Generate(10, "A.B.C.D.E.F.G", ".")));
+			}
         }
 
         private void minimize_Click(object sender, RoutedEventArgs e)
@@ -119,5 +126,10 @@ namespace LABS_WPF.Windows
         {
             MessageBox.Show($"Password: {PasswordTxt.Password}");
         }
-    }
+
+		private void Combobox_GotFocus(object sender, RoutedEventArgs e)
+		{
+            Combobox.IsDropDownOpen = true;
+		}
+	}
 }
