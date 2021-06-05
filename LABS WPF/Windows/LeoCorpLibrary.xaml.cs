@@ -60,5 +60,16 @@ namespace LABS_WPF.Windows
             var scale = ScreenHelpers.GetScreenScalingFromWPFWindow(this);
             MessageBox.Show($"DPI: {dpi}\nScale: {scale}");
 		}
+
+		private void PwrBtn_Click(object sender, RoutedEventArgs e)
+		{
+            var pwrs = Password.GenerateAmount(10, 15, PasswordPresets.Complex);
+            string msg = "";
+            for (int i = 0; i < pwrs.Count; i++)
+			{
+                msg += $"{pwrs[i]}\n";
+			}
+            MessageBox.Show(msg);
+		}
 	}
 }
