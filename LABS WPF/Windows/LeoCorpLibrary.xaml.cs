@@ -35,6 +35,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using LeoCorpLibrary;
+using LeoCorpLibrary.UI;
 
 namespace LABS_WPF.Windows
 {
@@ -52,5 +53,12 @@ namespace LABS_WPF.Windows
         {
             MessageBox.Show(Maths.Sum(10, -1, 10.3).ToString());
         }
-    }
+
+		private void ScaleBtn_Click(object sender, RoutedEventArgs e)
+		{
+            var dpi = ScreenHelpers.GetScreenDPIFromWPFWindow(this);
+            var scale = ScreenHelpers.GetScreenScalingFromWPFWindow(this);
+            MessageBox.Show($"DPI: {dpi}\nScale: {scale}");
+		}
+	}
 }

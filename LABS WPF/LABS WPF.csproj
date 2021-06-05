@@ -47,7 +47,7 @@
     <SplashScreen Include="SplashScreen1.png" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="LeoCorpLibrary" Version="2.2.0.2009-pre1" />
+    <PackageReference Include="LeoCorpLibrary" Version="3.7.0.2106-rc1" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>

@@ -124,7 +124,7 @@ namespace LABS_WPF
 
         private void TestButton_Click_7(object sender, RoutedEventArgs e)
         {
-            LeoCorpLibrary.Update.Check(Definitions.Version, Definitions.Version + "-test", new About(), new UserControlAdd());
+            //LeoCorpLibrary.Update.Check(Definitions.Version, Definitions.Version + "-test", new About(), new UserControlAdd());
         }
 
         private void TestButton_Click_8(object sender, RoutedEventArgs e)

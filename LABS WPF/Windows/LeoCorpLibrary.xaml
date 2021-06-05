@@ -11,6 +11,7 @@
     <Grid>
         <StackPanel FlowDirection="LeftToRight" Orientation="Horizontal" VerticalAlignment="Top">
             <local:TestButton Content="Sum" extensions:CornerRadiusExtension.CornerRadius="5" Height="34" Width="102" Click="TestButton_Click"></local:TestButton>
+            <local:TestButton Content="DPI/Scale" extensions:CornerRadiusExtension.CornerRadius="5" Height="34" Width="102" Click="ScaleBtn_Click" x:Name="ScaleBtn"></local:TestButton>
         </StackPanel>
     </Grid>
 </Window>
