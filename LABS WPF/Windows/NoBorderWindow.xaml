@@ -267,6 +267,63 @@
 
 				<Image Source="https://media.rawg.io/media/achievements/26e/26eabbf2e0b0b0f450cfd04dff816756.jpg" x:Name="img1" Width="50" Height="50" HorizontalAlignment="Left"/>
 				<ComboBox x:Name="Combobox" GotFocus="Combobox_GotFocus" IsTextSearchEnabled="True" IsEditable="True"/>
+
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+
+					<Grid Grid.Column="0">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition/>
+							<ColumnDefinition/>
+						</Grid.ColumnDefinitions>
+						<Button Content="Button" Padding="10"/>
+						<GridSplitter HorizontalAlignment="Center"   
+                      VerticalAlignment="Stretch"   
+                      Grid.Column="1" Grid.Row="0"   
+                      Grid.RowSpan="3" Width="4" Background="Black">
+						</GridSplitter>
+					</Grid>
+					
+					<Grid Grid.Column="1">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition/>
+							<ColumnDefinition/>
+						</Grid.ColumnDefinitions>
+						<Button Content="Button" Padding="10"/>
+						<GridSplitter HorizontalAlignment="Center"   
+                      VerticalAlignment="Stretch"   
+                      Grid.Column="1" Grid.Row="0"   
+                      Grid.RowSpan="3" Width="4" Background="Black">
+						</GridSplitter>					</Grid>
+					<Grid Grid.Column="2">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition/>
+							<ColumnDefinition/>
+						</Grid.ColumnDefinitions>
+						<Button Content="Button" Padding="10"/>
+						<GridSplitter HorizontalAlignment="Center"   
+                      VerticalAlignment="Stretch"   
+                      Grid.Column="1" Grid.Row="0"   
+                      Grid.RowSpan="3" Width="4" Background="Black">
+						</GridSplitter>					</Grid>
+					<Grid Grid.Column="3">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition/>
+							<ColumnDefinition/>
+						</Grid.ColumnDefinitions>
+						<Button Content="Button" Padding="10"/>
+						<GridSplitter HorizontalAlignment="Center"   
+                      VerticalAlignment="Stretch"   
+                      Grid.Column="1" Grid.Row="0"   
+                      Grid.RowSpan="3" Width="4" Background="Black">
+						</GridSplitter>					</Grid>
+				</Grid>
 			</StackPanel>
 		</Grid>
 	</Border>
