@@ -32,19 +32,19 @@ using System.Windows.Media;
 
 namespace LABS_WPF.Extensions
 {
-    public class ImageSourceExtension
-    {
-        public static ImageSource GetImageSource(DependencyObject obj)
-        {
-            return (ImageSource)obj.GetValue(ImageSourceProperty);
-        }
+	public class ImageSourceExtension
+	{
+		public static ImageSource GetImageSource(DependencyObject obj)
+		{
+			return (ImageSource)obj.GetValue(ImageSourceProperty);
+		}
 
-        public static void SetImageSource(DependencyObject obj, ImageSource value)
-        {
-            obj.SetValue(ImageSourceProperty, value);
-        }
+		public static void SetImageSource(DependencyObject obj, ImageSource value)
+		{
+			obj.SetValue(ImageSourceProperty, value);
+		}
 
-        private static readonly ImageSource defaultValue = new Image().Source;
-        public static readonly DependencyProperty ImageSourceProperty = DependencyProperty.RegisterAttached("ImageSource", typeof(ImageSource), typeof(ImageSourceExtension), new PropertyMetadata(defaultValue));
-    }
+		private static readonly ImageSource defaultValue = new Image().Source;
+		public static readonly DependencyProperty ImageSourceProperty = DependencyProperty.RegisterAttached("ImageSource", typeof(ImageSource), typeof(ImageSourceExtension), new PropertyMetadata(defaultValue));
+	}
 }

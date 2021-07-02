@@ -42,99 +42,99 @@ using System.Windows.Shapes;
 
 namespace LABS_WPF
 {
-    /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
-    {
-        public MainWindow()
-        {
-            //Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-US");
-            InitializeComponent();
-            LeoCorpLibrary.Update.GetLastVersion("https://bing.com");
+	/// <summary>
+	/// Logique d'interaction pour MainWindow.xaml
+	/// </summary>
+	public partial class MainWindow : Window
+	{
+		public MainWindow()
+		{
+			//Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-US");
+			InitializeComponent();
+			LeoCorpLibrary.Update.GetLastVersion("https://bing.com");
 
-        }
+		}
 
-        /// <summary>
-        /// Lorsque la souris se déplace.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void StackPanel_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.LeftButton == MouseButtonState.Pressed)
-                DragMove(); // Déplacer
-        }
+		/// <summary>
+		/// Lorsque la souris se déplace.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void StackPanel_MouseMove(object sender, MouseEventArgs e)
+		{
+			if (e.LeftButton == MouseButtonState.Pressed)
+				DragMove(); // Déplacer
+		}
 
-        /// <summary>
-        /// Lors du clic.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void LABSButton2_Click(object sender, RoutedEventArgs e)
-        {
-            Process.Start(Definitions.GitHubRepoUrl); // Démarrer dans un navigateur
-        }
+		/// <summary>
+		/// Lors du clic.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void LABSButton2_Click(object sender, RoutedEventArgs e)
+		{
+			Process.Start(Definitions.GitHubRepoUrl); // Démarrer dans un navigateur
+		}
 
-        /// <summary>
-        /// Lors du clic.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void LABSButton1_Click(object sender, RoutedEventArgs e)
-        {
-            About about = new About();
-            about.Show(); // Ouvrir la fenêtre "A propos"
-        }
+		/// <summary>
+		/// Lors du clic.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void LABSButton1_Click(object sender, RoutedEventArgs e)
+		{
+			About about = new About();
+			about.Show(); // Ouvrir la fenêtre "A propos"
+		}
 
-        private void TestButton_Click(object sender, RoutedEventArgs e)
-        {
-            new Windows.LeoCorpLibrary().Show();
-        }
+		private void TestButton_Click(object sender, RoutedEventArgs e)
+		{
+			new Windows.LeoCorpLibrary().Show();
+		}
 
-        private void TestButton_Click_1(object sender, RoutedEventArgs e)
-        {
-            new Windows.UserControlAdd().Show();
-        }
+		private void TestButton_Click_1(object sender, RoutedEventArgs e)
+		{
+			new Windows.UserControlAdd().Show();
+		}
 
-        private void TestButton_Click_2(object sender, RoutedEventArgs e)
-        {
-            new NoBorderWindow().Show();
-        }
+		private void TestButton_Click_2(object sender, RoutedEventArgs e)
+		{
+			new NoBorderWindow().Show();
+		}
 
-        private void TestButton_Click_3(object sender, RoutedEventArgs e)
-        {
-            new ScrollWindow().Show();
-        }
+		private void TestButton_Click_3(object sender, RoutedEventArgs e)
+		{
+			new ScrollWindow().Show();
+		}
 
-        private void TestButton_Click_4(object sender, RoutedEventArgs e)
-        {
-            new BluredWindow().Show();
-        }
+		private void TestButton_Click_4(object sender, RoutedEventArgs e)
+		{
+			new BluredWindow().Show();
+		}
 
-        private void TestButton_Click_5(object sender, RoutedEventArgs e)
-        {
-            new MaximizeWindow().Show();
-        }
+		private void TestButton_Click_5(object sender, RoutedEventArgs e)
+		{
+			new MaximizeWindow().Show();
+		}
 
-        private void TestButton_Click_6(object sender, RoutedEventArgs e)
-        {
-            new DownloadFileWPF().Show();
-        }
+		private void TestButton_Click_6(object sender, RoutedEventArgs e)
+		{
+			new DownloadFileWPF().Show();
+		}
 
-        private void TestButton_Click_7(object sender, RoutedEventArgs e)
-        {
-            //LeoCorpLibrary.Update.Check(Definitions.Version, Definitions.Version + "-test", new About(), new UserControlAdd());
-        }
+		private void TestButton_Click_7(object sender, RoutedEventArgs e)
+		{
+			//LeoCorpLibrary.Update.Check(Definitions.Version, Definitions.Version + "-test", new About(), new UserControlAdd());
+		}
 
-        private void TestButton_Click_8(object sender, RoutedEventArgs e)
-        {
-            new BarChartWindow().Show();
-        }
+		private void TestButton_Click_8(object sender, RoutedEventArgs e)
+		{
+			new BarChartWindow().Show();
+		}
 
 		private void TestButton_Click_9(object sender, RoutedEventArgs e)
 		{
-            new ListViewWindow().Show();
+			new ListViewWindow().Show();
 		}
 	}
 }

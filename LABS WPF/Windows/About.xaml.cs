@@ -39,29 +39,29 @@ using System.Windows.Shapes;
 
 namespace LABS_WPF.Windows
 {
-    /// <summary>
-    /// Logique d'interaction pour About.xaml
-    /// </summary>
-    public partial class About : Window
-    {
-        public About()
-        {
-            InitializeComponent();
-        }
+	/// <summary>
+	/// Logique d'interaction pour About.xaml
+	/// </summary>
+	public partial class About : Window
+	{
+		public About()
+		{
+			InitializeComponent();
+		}
 
-        /// <summary>
-        /// Lors du clic.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void linkTextBlock1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            Process.Start(Definitions.GitHubRepoUrl); // Démarrer dans un navigateur
-        }
+		/// <summary>
+		/// Lors du clic.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void linkTextBlock1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+		{
+			Process.Start(Definitions.GitHubRepoUrl); // Démarrer dans un navigateur
+		}
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            textblock1.Text = $"Version {Definitions.Version}";
-        }
-    }
+		private void Window_Loaded(object sender, RoutedEventArgs e)
+		{
+			textblock1.Text = $"Version {Definitions.Version}";
+		}
+	}
 }

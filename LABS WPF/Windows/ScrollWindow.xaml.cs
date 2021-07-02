@@ -37,14 +37,14 @@ using System.Windows.Shapes;
 
 namespace LABS_WPF.Windows
 {
-    /// <summary>
-    /// Logique d'interaction pour ScrollWindow.xaml
-    /// </summary>
-    public partial class ScrollWindow : Window
-    {
-        public ScrollWindow()
-        {
-            InitializeComponent();
-        }
-    }
+	/// <summary>
+	/// Logique d'interaction pour ScrollWindow.xaml
+	/// </summary>
+	public partial class ScrollWindow : Window
+	{
+		public ScrollWindow()
+		{
+			InitializeComponent();
+		}
+	}
 }

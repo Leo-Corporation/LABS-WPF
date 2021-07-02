@@ -39,37 +39,37 @@ using LeoCorpLibrary.UI;
 
 namespace LABS_WPF.Windows
 {
-    /// <summary>
-    /// Logique d'interaction pour LeoCorpLibrary.xaml
-    /// </summary>
-    public partial class LeoCorpLibrary : Window
-    {
-        public LeoCorpLibrary()
-        {
-            InitializeComponent();
-        }
+	/// <summary>
+	/// Logique d'interaction pour LeoCorpLibrary.xaml
+	/// </summary>
+	public partial class LeoCorpLibrary : Window
+	{
+		public LeoCorpLibrary()
+		{
+			InitializeComponent();
+		}
 
-        private void TestButton_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show(Maths.Sum(10, -1, 10.3).ToString());
-        }
+		private void TestButton_Click(object sender, RoutedEventArgs e)
+		{
+			MessageBox.Show(Maths.Sum(10, -1, 10.3).ToString());
+		}
 
 		private void ScaleBtn_Click(object sender, RoutedEventArgs e)
 		{
-            var dpi = ScreenHelpers.GetScreenDPIFromWPFWindow(this);
-            var scale = ScreenHelpers.GetScreenScalingFromWPFWindow(this);
-            MessageBox.Show($"DPI: {dpi}\nScale: {scale}");
+			var dpi = ScreenHelpers.GetScreenDPIFromWPFWindow(this);
+			var scale = ScreenHelpers.GetScreenScalingFromWPFWindow(this);
+			MessageBox.Show($"DPI: {dpi}\nScale: {scale}");
 		}
 
 		private void PwrBtn_Click(object sender, RoutedEventArgs e)
 		{
-            var pwrs = Password.GenerateAmount(10, 15, PasswordPresets.Complex);
-            string msg = "";
-            for (int i = 0; i < pwrs.Count; i++)
+			var pwrs = Password.GenerateAmount(10, 15, PasswordPresets.Complex);
+			string msg = "";
+			for (int i = 0; i < pwrs.Count; i++)
 			{
-                msg += $"{pwrs[i]}\n";
+				msg += $"{pwrs[i]}\n";
 			}
-            MessageBox.Show(msg);
+			MessageBox.Show(msg);
 		}
 	}
 }

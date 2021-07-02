@@ -39,16 +39,16 @@ using System.Windows.Shapes;
 
 namespace LABS_WPF.Windows
 {
-    /// <summary>
-    /// Logique d'interaction pour BluredWindow.xaml
-    /// </summary>
-    public partial class BluredWindow : Window
-    {
-        public BluredWindow()
-        {
-            InitializeComponent();
+	/// <summary>
+	/// Logique d'interaction pour BluredWindow.xaml
+	/// </summary>
+	public partial class BluredWindow : Window
+	{
+		public BluredWindow()
+		{
+			InitializeComponent();
 			EnableBlur();
-        }
+		}
 
 		[DllImport("user32.dll")]
 		internal static extern int SetWindowCompositionAttribute(IntPtr hwnd, ref WindowCompositionAttributeData data);

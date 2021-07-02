@@ -38,15 +38,15 @@ using System.Windows.Shapes;
 
 namespace LABS_WPF.Windows
 {
-    /// <summary>
-    /// Logique d'interaction pour BarChartWindow.xaml
-    /// </summary>
-    public partial class BarChartWindow : Window
-    {
-        public BarChartWindow()
-        {
-            InitializeComponent();
-            Content.Children.Add(new BarChart(10, 5, 2.25, 4, 6, 10, 14));
-        }
-    }
+	/// <summary>
+	/// Logique d'interaction pour BarChartWindow.xaml
+	/// </summary>
+	public partial class BarChartWindow : Window
+	{
+		public BarChartWindow()
+		{
+			InitializeComponent();
+			Content.Children.Add(new BarChart(10, 5, 2.25, 4, 6, 10, 14));
+		}
+	}
 }

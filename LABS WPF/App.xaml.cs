@@ -32,38 +32,38 @@ using System.Windows.Shell;
 
 namespace LABS_WPF
 {
-    /// <summary>
-    /// Logique d'interaction pour App.xaml
-    /// </summary>
-    public partial class App : Application
-    {
-        protected override void OnStartup(StartupEventArgs e)
-        {
-            //base.OnStartup(e);
+	/// <summary>
+	/// Logique d'interaction pour App.xaml
+	/// </summary>
+	public partial class App : Application
+	{
+		protected override void OnStartup(StartupEventArgs e)
+		{
+			//base.OnStartup(e);
 
-            if (e.Args.Length > 0)
-            {
-                MessageBox.Show("Test");
-                Shutdown();
-            }
+			if (e.Args.Length > 0)
+			{
+				MessageBox.Show("Test");
+				Shutdown();
+			}
 
-            JumpTask jumpTask = new JumpTask
-            {
-                Title = "This is a test",
-                Description = "A test jump list.",
-                IconResourcePath = System.Reflection.Assembly.GetEntryAssembly().CodeBase,
-                ApplicationPath = System.Reflection.Assembly.GetEntryAssembly().CodeBase,
-                Arguments = "/test"
-            };
+			JumpTask jumpTask = new JumpTask
+			{
+				Title = "This is a test",
+				Description = "A test jump list.",
+				IconResourcePath = System.Reflection.Assembly.GetEntryAssembly().CodeBase,
+				ApplicationPath = System.Reflection.Assembly.GetEntryAssembly().CodeBase,
+				Arguments = "/test"
+			};
 
-            JumpList jumpList = new JumpList();
-            jumpList.JumpItems.Add(jumpTask);
-            jumpList.ShowFrequentCategory = false;
-            jumpList.ShowRecentCategory = false;
+			JumpList jumpList = new JumpList();
+			jumpList.JumpItems.Add(jumpTask);
+			jumpList.ShowFrequentCategory = false;
+			jumpList.ShowRecentCategory = false;
 
-            JumpList.SetJumpList(Current, jumpList);
+			JumpList.SetJumpList(Current, jumpList);
 
-            // Open another window: new Windows.About().Show();
-        }
-    }
+			// Open another window: new Windows.About().Show();
+		}
+	}
 }

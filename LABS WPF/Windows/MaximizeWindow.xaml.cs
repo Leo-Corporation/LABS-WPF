@@ -38,27 +38,27 @@ using System.Windows.Shapes;
 
 namespace LABS_WPF.Windows
 {
-    /// <summary>
-    /// Logique d'interaction pour MaximizeWindow.xaml
-    /// </summary>
-    public partial class MaximizeWindow : Window
-    {
-        public MaximizeWindow()
-        {
-            InitializeComponent();
-            MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
-            MaxWidth = SystemParameters.MaximizedPrimaryScreenWidth;
-        }
+	/// <summary>
+	/// Logique d'interaction pour MaximizeWindow.xaml
+	/// </summary>
+	public partial class MaximizeWindow : Window
+	{
+		public MaximizeWindow()
+		{
+			InitializeComponent();
+			MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
+			MaxWidth = SystemParameters.MaximizedPrimaryScreenWidth;
+		}
 
-        private void Window_LocationChanged(object sender, EventArgs e)
-        {
-            MaxHeight = SystemParameters.WorkArea.Height;
-            MaxWidth = SystemParameters.WorkArea.Width;
-        }
+		private void Window_LocationChanged(object sender, EventArgs e)
+		{
+			MaxHeight = SystemParameters.WorkArea.Height;
+			MaxWidth = SystemParameters.WorkArea.Width;
+		}
 
-        private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
+		private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
+		{
 
-        }
-    }
+		}
+	}
 }

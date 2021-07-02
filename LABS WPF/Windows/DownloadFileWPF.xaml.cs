@@ -39,49 +39,49 @@ using System.Windows.Shapes;
 
 namespace LABS_WPF.Windows
 {
-    /// <summary>
-    /// Logique d'interaction pour DownloadFileWPF.xaml
-    /// </summary>
-    public partial class DownloadFileWPF : Window
-    {
-        WebClient client = new WebClient();
-        string path = System.AppDomain.CurrentDomain.BaseDirectory + @"\test.txt";
-        string link = "https://raw.githubusercontent.com/Leo-Corporation/LeoCorp-Docs/master/Liens/Update%20System/G%C3%A9n%C3%A9rateur%20de%20mots%20de%20passe%203/G%C3%A9n%C3%A9rateur%20de%20mots%20de%20passe%203.exe";
-        public DownloadFileWPF()
-        {
-            InitializeComponent();
-        }
+	/// <summary>
+	/// Logique d'interaction pour DownloadFileWPF.xaml
+	/// </summary>
+	public partial class DownloadFileWPF : Window
+	{
+		WebClient client = new WebClient();
+		string path = System.AppDomain.CurrentDomain.BaseDirectory + @"\test.txt";
+		string link = "https://raw.githubusercontent.com/Leo-Corporation/LeoCorp-Docs/master/Liens/Update%20System/G%C3%A9n%C3%A9rateur%20de%20mots%20de%20passe%203/G%C3%A9n%C3%A9rateur%20de%20mots%20de%20passe%203.exe";
+		public DownloadFileWPF()
+		{
+			InitializeComponent();
+		}
 
-        private void StartBtn_Click(object sender, RoutedEventArgs e)
-        {
-            client.DownloadProgressChanged += Client_DownloadProgressChanged;
-            client.DownloadFileCompleted += Client_DownloadFileCompleted;
-            Thread thread = new Thread(() =>
-            {
-                Uri uri = new Uri(link);
-                client.DownloadFileAsync(uri, path);
-            });
-            thread.Start();
-        }
+		private void StartBtn_Click(object sender, RoutedEventArgs e)
+		{
+			client.DownloadProgressChanged += Client_DownloadProgressChanged;
+			client.DownloadFileCompleted += Client_DownloadFileCompleted;
+			Thread thread = new Thread(() =>
+			{
+				Uri uri = new Uri(link);
+				client.DownloadFileAsync(uri, path);
+			});
+			thread.Start();
+		}
 
-        private void Client_DownloadFileCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
-        {
-            Dispatcher.Invoke(() =>
-            {
-                MessageBox.Show("Completed");
-            });
-        }
+		private void Client_DownloadFileCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
+		{
+			Dispatcher.Invoke(() =>
+			{
+				MessageBox.Show("Completed");
+			});
+		}
 
-        private void Client_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
-        {
-            Dispatcher.Invoke(() =>
-            {
-                PgrBar.Minimum = 0;
-                double receive = double.Parse(e.BytesReceived.ToString());
-                double total = double.Parse(e.TotalBytesToReceive.ToString());
-                double percentage = receive / total * 100;
-                PgrBar.Value = int.Parse(Math.Truncate(percentage).ToString());
-            });
-        }
-    }
+		private void Client_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+		{
+			Dispatcher.Invoke(() =>
+			{
+				PgrBar.Minimum = 0;
+				double receive = double.Parse(e.BytesReceived.ToString());
+				double total = double.Parse(e.TotalBytesToReceive.ToString());
+				double percentage = receive / total * 100;
+				PgrBar.Value = int.Parse(Math.Truncate(percentage).ToString());
+			});
+		}
+	}
 }

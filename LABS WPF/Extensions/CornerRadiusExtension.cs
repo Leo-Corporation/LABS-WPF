@@ -30,18 +30,18 @@ using System.Windows;
 
 namespace LABS_WPF.Extensions
 {
-    public class CornerRadiusExtension
-    {
-        public static CornerRadius GetCornerRadius(DependencyObject obj)
-        {
-            return (CornerRadius)obj.GetValue(CornerRadiusProperty);
-        }
+	public class CornerRadiusExtension
+	{
+		public static CornerRadius GetCornerRadius(DependencyObject obj)
+		{
+			return (CornerRadius)obj.GetValue(CornerRadiusProperty);
+		}
 
-        public static void SetCornerRadius(DependencyObject obj, CornerRadius value)
-        {
-            obj.SetValue(CornerRadiusProperty, value);
-        }
+		public static void SetCornerRadius(DependencyObject obj, CornerRadius value)
+		{
+			obj.SetValue(CornerRadiusProperty, value);
+		}
 
-        public static readonly DependencyProperty CornerRadiusProperty = DependencyProperty.RegisterAttached("CornerRadius", typeof(CornerRadius), typeof(CornerRadiusExtension), new PropertyMetadata(new CornerRadius(0)));
-    }
+		public static readonly DependencyProperty CornerRadiusProperty = DependencyProperty.RegisterAttached("CornerRadius", typeof(CornerRadius), typeof(CornerRadiusExtension), new PropertyMetadata(new CornerRadius(0)));
+	}
 }

@@ -41,34 +41,34 @@ using System.Windows.Threading;
 
 namespace LABS_WPF.UserControls
 {
-    /// <summary>
-    /// Logique d'interaction pour TestUC.xaml
-    /// </summary>
-    public partial class TestUC : UserControl
-    {
-        public TestUC()
-        {
-            InitializeComponent();
-            DispatcherTimer timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromMilliseconds(100);
-            timer.Tick += Timer_Tick;
-            timer.Start();
-        }
+	/// <summary>
+	/// Logique d'interaction pour TestUC.xaml
+	/// </summary>
+	public partial class TestUC : UserControl
+	{
+		public TestUC()
+		{
+			InitializeComponent();
+			DispatcherTimer timer = new DispatcherTimer();
+			timer.Interval = TimeSpan.FromMilliseconds(100);
+			timer.Tick += Timer_Tick;
+			timer.Start();
+		}
 
-        private void Timer_Tick(object sender, EventArgs e)
-        {
-            string hour = DateTime.Now.Hour.ToString();
-            string minute = DateTime.Now.Minute.ToString();
-            string second = DateTime.Now.Second.ToString();
-            TextBlock.Text = $"{hour}:{minute}:{second}";
-        }
+		private void Timer_Tick(object sender, EventArgs e)
+		{
+			string hour = DateTime.Now.Hour.ToString();
+			string minute = DateTime.Now.Minute.ToString();
+			string second = DateTime.Now.Second.ToString();
+			TextBlock.Text = $"{hour}:{minute}:{second}";
+		}
 
-        private void UserControl_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            if (CheckBox1.Visibility != Visibility.Hidden)
-            {
-                CheckBox1.IsChecked = !CheckBox1.IsChecked;
-            }
-        }
-    }
+		private void UserControl_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+		{
+			if (CheckBox1.Visibility != Visibility.Hidden)
+			{
+				CheckBox1.IsChecked = !CheckBox1.IsChecked;
+			}
+		}
+	}
 }

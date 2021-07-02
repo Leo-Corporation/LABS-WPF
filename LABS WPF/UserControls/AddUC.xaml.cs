@@ -39,19 +39,19 @@ using System.Windows.Shapes;
 
 namespace LABS_WPF.UserControls
 {
-    /// <summary>
-    /// Logique d'interaction pour AddUC.xaml
-    /// </summary>
-    public partial class AddUC : UserControl
-    {
-        public AddUC()
-        {
-            InitializeComponent();
-        }
+	/// <summary>
+	/// Logique d'interaction pour AddUC.xaml
+	/// </summary>
+	public partial class AddUC : UserControl
+	{
+		public AddUC()
+		{
+			InitializeComponent();
+		}
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Definitions.UserControlAdd.AddUC();
-        }
-    }
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+			Definitions.UserControlAdd.AddUC();
+		}
+	}
 }

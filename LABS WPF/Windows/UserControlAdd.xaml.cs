@@ -39,96 +39,96 @@ using LABS_WPF.UserControls;
 
 namespace LABS_WPF.Windows
 {
-    /// <summary>
-    /// Logique d'interaction pour UserControlAdd.xaml
-    /// </summary>
-    public partial class UserControlAdd : Window
-    {
-        AddUC add = new AddUC();
-        public UserControlAdd()
-        {
-            InitializeComponent();
-            WrapPanel1.Children.Add(add);
-        }
+	/// <summary>
+	/// Logique d'interaction pour UserControlAdd.xaml
+	/// </summary>
+	public partial class UserControlAdd : Window
+	{
+		AddUC add = new AddUC();
+		public UserControlAdd()
+		{
+			InitializeComponent();
+			WrapPanel1.Children.Add(add);
+		}
 
-        private void TestButton_Click(object sender, RoutedEventArgs e)
-        {
-            Definitions.UserControlAdd = this;
-            AddUC();
-        }
+		private void TestButton_Click(object sender, RoutedEventArgs e)
+		{
+			Definitions.UserControlAdd = this;
+			AddUC();
+		}
 
-        internal void AddUC()
-        {
-            TestUC testUC = new TestUC();
-            WrapPanel1.Children.Add(testUC);
-            WrapPanel1.Children.Remove(add);
-            WrapPanel1.Children.Add(add);
-        }
+		internal void AddUC()
+		{
+			TestUC testUC = new TestUC();
+			WrapPanel1.Children.Add(testUC);
+			WrapPanel1.Children.Remove(add);
+			WrapPanel1.Children.Add(add);
+		}
 
-        private void Window_GotFocus(object sender, RoutedEventArgs e)
-        {
-            Definitions.UserControlAdd = this;
-        }
+		private void Window_GotFocus(object sender, RoutedEventArgs e)
+		{
+			Definitions.UserControlAdd = this;
+		}
 
-        private void Window_Activated(object sender, EventArgs e)
-        {
-            Definitions.UserControlAdd = this;
-        }
+		private void Window_Activated(object sender, EventArgs e)
+		{
+			Definitions.UserControlAdd = this;
+		}
 
-        private void button2_Click(object sender, RoutedEventArgs e)
-        {
-            WrapPanel1.Children.Clear();
-            WrapPanel1.Children.Add(add);
-        }
+		private void button2_Click(object sender, RoutedEventArgs e)
+		{
+			WrapPanel1.Children.Clear();
+			WrapPanel1.Children.Add(add);
+		}
 
-        private void button3_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                for (int i = 0; i < WrapPanel1.Children.Count; i++)
-                {
-                    if (WrapPanel1.Children[i] is TestUC)
-                    {
-                        TestUC testUC = (TestUC)WrapPanel1.Children[i];
-                        testUC.CheckBox1.Visibility = Visibility.Visible;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message); // Afficher une erreur
-            }
-            
-        }
+		private void button3_Click(object sender, RoutedEventArgs e)
+		{
+			try
+			{
+				for (int i = 0; i < WrapPanel1.Children.Count; i++)
+				{
+					if (WrapPanel1.Children[i] is TestUC)
+					{
+						TestUC testUC = (TestUC)WrapPanel1.Children[i];
+						testUC.CheckBox1.Visibility = Visibility.Visible;
+					}
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message); // Afficher une erreur
+			}
 
-        private void button4_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                List<TestUC> testUCs = new List<TestUC>();
-                UIElementCollection uIElementCollection = WrapPanel1.Children;
+		}
 
-                foreach (UIElement uIElement in uIElementCollection)
-                {
-                    if (uIElement is TestUC)
-                    {
-                        TestUC testUC = (TestUC)uIElement;
-                        if ((bool)testUC.CheckBox1.IsChecked)
-                        {
-                            testUCs.Add(testUC);
-                        }
-                    }
-                }
+		private void button4_Click(object sender, RoutedEventArgs e)
+		{
+			try
+			{
+				List<TestUC> testUCs = new List<TestUC>();
+				UIElementCollection uIElementCollection = WrapPanel1.Children;
 
-                foreach (TestUC testUC1 in testUCs)
-                {
-                    WrapPanel1.Children.Remove(testUC1);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-    }
+				foreach (UIElement uIElement in uIElementCollection)
+				{
+					if (uIElement is TestUC)
+					{
+						TestUC testUC = (TestUC)uIElement;
+						if ((bool)testUC.CheckBox1.IsChecked)
+						{
+							testUCs.Add(testUC);
+						}
+					}
+				}
+
+				foreach (TestUC testUC1 in testUCs)
+				{
+					WrapPanel1.Children.Remove(testUC1);
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
+		}
+	}
 }

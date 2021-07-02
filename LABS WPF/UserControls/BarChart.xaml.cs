@@ -39,47 +39,47 @@ using System.Windows.Shapes;
 
 namespace LABS_WPF.UserControls
 {
-    /// <summary>
-    /// Logique d'interaction pour BarChart.xaml
-    /// </summary>
-    public partial class BarChart : UserControl
-    {
-        public BarChart(params double[] values)
-        {
-            InitializeComponent();
-            InitUI(values);
-        }
+	/// <summary>
+	/// Logique d'interaction pour BarChart.xaml
+	/// </summary>
+	public partial class BarChart : UserControl
+	{
+		public BarChart(params double[] values)
+		{
+			InitializeComponent();
+			InitUI(values);
+		}
 
-        void InitUI(params double[] val)
-        {
-            double max = Maths.GetBiggestNumber(val);
-            double coef = ChartPresenter.Width / max;
-            List<double> widths = new List<double>();
-            
-            foreach (double value in val)
-            {
-                double j = value * coef;
-                widths.Add(j);
-            }
+		void InitUI(params double[] val)
+		{
+			double max = Maths.GetBiggestNumber(val);
+			double coef = ChartPresenter.Width / max;
+			List<double> widths = new List<double>();
 
-            foreach (double d in widths)
-            {
-                ChartPresenter.Children.Add(CreateRectangle(d));
-            }
-        }
+			foreach (double value in val)
+			{
+				double j = value * coef;
+				widths.Add(j);
+			}
 
-        Rectangle CreateRectangle(double width)
-        {
-            return new Rectangle
-            {
-                Height = 40,
-                Width = width,
-                Fill = new SolidColorBrush { Color = Colors.Blue },
-                Margin = new Thickness { Bottom = 15, Left = 0, Right = 0, Top = 30 },
-                RadiusX = 5,
-                RadiusY = 5,
-                HorizontalAlignment = HorizontalAlignment.Left
-            };
-        }
-    }
+			foreach (double d in widths)
+			{
+				ChartPresenter.Children.Add(CreateRectangle(d));
+			}
+		}
+
+		Rectangle CreateRectangle(double width)
+		{
+			return new Rectangle
+			{
+				Height = 40,
+				Width = width,
+				Fill = new SolidColorBrush { Color = Colors.Blue },
+				Margin = new Thickness { Bottom = 15, Left = 0, Right = 0, Top = 30 },
+				RadiusX = 5,
+				RadiusY = 5,
+				HorizontalAlignment = HorizontalAlignment.Left
+			};
+		}
+	}
 }
