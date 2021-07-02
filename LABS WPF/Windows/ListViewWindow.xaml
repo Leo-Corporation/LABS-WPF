@@ -1,0 +1,32 @@
+﻿<Window x:Class="LABS_WPF.Windows.ListViewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LABS_WPF.Windows"
+        mc:Ignorable="d"
+        Title="ListViewWindow" Height="450" Width="800">
+    <Grid>
+		<ListView x:Name="ListView" ItemsSource="{Binding people}">
+			<ListView.View>
+				<GridView>
+					<GridView.Columns>
+						<GridViewColumn Header="First Name" DisplayMemberBinding="{Binding FirstName}"/>
+						<GridViewColumn Header="Last Name" DisplayMemberBinding="{Binding LastName}"/>
+						<GridViewColumn Header="Age" DisplayMemberBinding="{Binding Age}"/>
+					</GridView.Columns>
+				</GridView>
+			</ListView.View>
+			
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<StackPanel Orientation="Horizontal">
+						<TextBlock Text="{Binding FirstName}" />
+						<TextBlock Text="{Binding LastName}" />
+						<TextBlock Text="{Binding Age}" />
+					</StackPanel>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+    </Grid>
+</Window>

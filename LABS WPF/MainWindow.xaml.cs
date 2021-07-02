@@ -131,5 +131,10 @@ namespace LABS_WPF
         {
             new BarChartWindow().Show();
         }
-    }
+
+		private void TestButton_Click_9(object sender, RoutedEventArgs e)
+		{
+            new ListViewWindow().Show();
+		}
+	}
 }
