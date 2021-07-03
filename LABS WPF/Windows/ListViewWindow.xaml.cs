@@ -44,11 +44,11 @@ namespace LABS_WPF.Windows
 	{
 		internal List<Person> people = new()
 		{
+			new("Léo", "Corporation", 1),
+			new("Léo", "Corporation", 2),
+			new("Léo", "Corporation", 3),
 			new("Léo", "Corporation", 4),
-			new("Léo", "Corporation", 4),
-			new("Léo", "Corporation", 4),
-			new("Léo", "Corporation", 4),
-			new("Léo", "Corporation", 4),
+			new("Léo", "Corporation", 5),
 			new("Léo", "Corporation", 4),
 			new("Léo", "Corporation", 4),
 			new("Léo", "Corporation", 4),
@@ -58,10 +58,24 @@ namespace LABS_WPF.Windows
 			new("Léo", "Corporation", 4),
 			new("Léo", "Corporation", 4)
 		};
+
+		internal List<List<string>> items = new()
+		{
+			new() { "Léo", "Corporation", "1" },
+			new() { "Léo", "Corporation", "2" },
+			new() { "Léo", "Corporation", "3" },
+			new() { "Léo", "Corporation", "4" },
+			new() { "Léo", "Corporation", "5" },
+			new() { "Léo", "Corporation", "6" }
+		};
 		public ListViewWindow()
 		{
 			InitializeComponent();
-			ListView.ItemsSource = people;
+			ListView.ItemsSource = items;
+
+			GVC1.DisplayMemberBinding = new Binding("Item[0]");
+			GVC2.DisplayMemberBinding = new Binding("Item[1]");
+			GVC3.DisplayMemberBinding = new Binding("Item[2]");
 		}
 	}
 

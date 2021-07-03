@@ -7,13 +7,13 @@
 		mc:Ignorable="d"
 		Title="ListViewWindow" Height="450" Width="800">
 	<Grid>
-		<ListView x:Name="ListView" ItemsSource="{Binding people}">
+		<ListView x:Name="ListView" ItemsSource="{Binding items}">
 			<ListView.View>
 				<GridView>
 					<GridView.Columns>
-						<GridViewColumn Header="First Name" DisplayMemberBinding="{Binding FirstName}"/>
-						<GridViewColumn Header="Last Name" DisplayMemberBinding="{Binding LastName}"/>
-						<GridViewColumn Header="Age" DisplayMemberBinding="{Binding Age}"/>
+						<GridViewColumn x:Name="GVC1" Header="First Name"/>
+						<GridViewColumn x:Name="GVC2" Header="Last Name"/>
+						<GridViewColumn x:Name="GVC3" Header="Age"/>
 					</GridView.Columns>
 				</GridView>
 			</ListView.View>
@@ -21,7 +21,7 @@
 			<ListView.ItemTemplate>
 				<DataTemplate>
 					<StackPanel Orientation="Horizontal">
-						<TextBlock Text="{Binding FirstName}" />
+						<TextBlock Text="{Binding FirstName}" Foreground="#ff0000"/>
 						<TextBlock Text="{Binding LastName}" />
 						<TextBlock Text="{Binding Age}" />
 					</StackPanel>
