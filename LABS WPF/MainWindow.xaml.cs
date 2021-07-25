@@ -136,5 +136,10 @@ namespace LABS_WPF
 		{
 			new ListViewWindow().Show();
 		}
+
+		private void TestButton_Click_10(object sender, RoutedEventArgs e)
+		{
+			new AnimatedWindow().Show(); // Show
+		}
 	}
 }
