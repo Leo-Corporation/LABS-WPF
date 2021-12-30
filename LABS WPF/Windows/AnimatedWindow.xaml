@@ -18,6 +18,10 @@
 	</Window.Resources>
 	
 	<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 		<Button Style="{DynamicResource BtnStyle}" BorderThickness="0" Padding="5" Background="#FF3264FF" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontWeight="Bold" FontSize="26">
 			<StackPanel Orientation="Horizontal">
 				<TextBlock Text="&#xF6AA;" FontFamily="..\Fonts\#FluentSystemIcons-Regular" Margin="0 0 5 0" VerticalAlignment="Center" FontWeight="Normal" RenderTransformOrigin="0.5,0.5">
@@ -51,5 +55,28 @@
 				</EventTrigger>
 			</Button.Triggers>
 		</Button>
+
+        <Border Grid.Row="1" BorderBrush="Red" Margin="10" Height="150" Width="150" BorderThickness="2" CornerRadius="10">
+            <Image Source="Logo.png" Height="150" Width="150" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Image.Triggers>
+                    <EventTrigger RoutedEvent="MouseEnter">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation From="150" To="250" Duration="0:0:0.2" Storyboard.TargetProperty="Height"/>
+                                <DoubleAnimation From="150" To="250" Duration="0:0:0.2" Storyboard.TargetProperty="Width"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseLeave">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation From="250" To="150" Duration="0:0:0.2" Storyboard.TargetProperty="Height"/>
+                                <DoubleAnimation From="250" To="150" Duration="0:0:0.2" Storyboard.TargetProperty="Width"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Image.Triggers>
+            </Image>
+        </Border>
     </Grid>
 </Window>
