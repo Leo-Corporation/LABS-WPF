@@ -59,6 +59,8 @@ namespace LABS_WPF.Windows
 			{
 				Combobox.Items.Add(new CustomItem(Password.Generate(10, "A.B.C.D.E.F.G", ".")));
 			}
+
+			EmojiTxt.Text = "🇫🇷";
 		}
 
 		private void minimize_Click(object sender, RoutedEventArgs e)
