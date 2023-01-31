@@ -47,7 +47,7 @@ public partial class ZoomWindow : Window
 	public ZoomWindow()
 	{
 		InitializeComponent();
-		dispatcherTimer.Interval = new(0, 0, 0, 0, 60);
+		dispatcherTimer.Interval = new(0, 0, 0, 0, 30);
 		dispatcherTimer.Tick += (o, e) =>
 		{
 			StartScreenCapture();
@@ -57,26 +57,20 @@ public partial class ZoomWindow : Window
 
 	private void StartScreenCapture()
 	{
-		Task.Factory.StartNew(() =>
+		System.Drawing.Point p = System.Windows.Forms.Cursor.Position;
+		System.Drawing.Bitmap screenBitmap = new System.Drawing.Bitmap(25,
+			25, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+		using (System.Drawing.Graphics screenGraphics = System.Drawing.Graphics.FromImage(screenBitmap))
 		{
-			while (true)
-			{
-				System.Drawing.Point p = System.Windows.Forms.Cursor.Position;
-				System.Drawing.Bitmap screenBitmap = new System.Drawing.Bitmap(25,
-					25, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
-				using (System.Drawing.Graphics screenGraphics = System.Drawing.Graphics.FromImage(screenBitmap))
-				{
-					screenGraphics.CopyFromScreen(p.X+12, p.Y+12, 0, 0, screenBitmap.Size);
-				}
-				Dispatcher.BeginInvoke(new Action(() =>
-				{
-					ZoomImg.Source = ConvertBitmapToImageSource(screenBitmap);
-					// Perform any additional UI updates here
-				}));
-				System.Threading.Thread.Sleep(100);
-				GC.Collect();
-			}
-		});
+			screenGraphics.CopyFromScreen(p.X - 12, p.Y - 12, 0, 0, screenBitmap.Size);
+		}
+		Dispatcher.BeginInvoke(new Action(() =>
+		{
+			ZoomImg.Source = ConvertBitmapToImageSource(screenBitmap);
+			// Perform any additional UI updates here
+		}));
+		System.Threading.Thread.Sleep(100);
+		GC.Collect();
 	}
 
 	private ImageSource ConvertBitmapToImageSource(System.Drawing.Bitmap bitmap)
