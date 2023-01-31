@@ -1,0 +1,54 @@
+﻿<Window x:Class="LABS_WPF.Windows.MousePixelsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LABS_WPF.Windows"
+        mc:Ignorable="d"
+        Title="MousePixelsWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Border x:Name="B1">
+            <TextBlock x:Name="T1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Border>
+        <Border x:Name="B2" Grid.Column="0" Grid.Row="1">
+            <TextBlock x:Name="T2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Border>
+        <Border x:Name="B3" Grid.Column="0" Grid.Row="2">
+            <TextBlock x:Name="T3" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Border>
+        <Border x:Name="B4" Grid.Row="0" Grid.Column="1">
+            <TextBlock x:Name="T4" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+        </Border>
+        <Border x:Name="B5" Grid.Row="1" Grid.Column="1">
+            <TextBlock x:Name="T5" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+        </Border>
+        <Border x:Name="B6" Grid.Row="2" Grid.Column="1">
+            <TextBlock x:Name="T6" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+        </Border>
+        <Border x:Name="B7" Grid.Row="0" Grid.Column="2">
+            <TextBlock x:Name="T7" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+        </Border>
+        <Border x:Name="B8" Grid.Row="1" Grid.Column="2">
+            <TextBlock x:Name="T8" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+        </Border>
+        <Border x:Name="B9" Grid.Row="2" Grid.Column="2">
+            <TextBlock x:Name="T9" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+        </Border>
+    </Grid>
+</Window>
