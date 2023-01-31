@@ -23,8 +23,10 @@ SOFTWARE.
 */
 using System.Collections.Generic;
 using System.Drawing;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Forms;
 using System.Windows.Media;
 using System.Windows.Threading;
 
@@ -40,38 +42,52 @@ namespace LABS_WPF.Windows
 		{
 			InitializeComponent();
 
-			dispatcherTimer.Interval = new(0, 0, 0, 0, 1); // Interval
-			dispatcherTimer.Tick += (o, e) =>
+			dispatcherTimer.Interval = new(0, 0, 0, 0, 60); // Interval
+			dispatcherTimer.Tick += async (o, e) =>
 			{
 				System.Drawing.Point p = System.Windows.Forms.Cursor.Position;
-
 				int count = 0;
 				List<Border> bs = new()
-				{
-					B1, B2,B3,B4,B5,B6, B7, B8, B9
-				};
-				List<TextBlock> ts = new()
-				{
-					T1, T2,T3,T4,T5,T6, T7, T8, T9
-				};
-				for (int x = -1; x < 2; x++)
-				{
-					for (int y = -1; y < 2; y++)
 					{
-						Bitmap bitmap = new(1, 1);
-						Graphics GFX = Graphics.FromImage(bitmap);
-						GFX.CopyFromScreen(new(p.X + x, p.Y + y), new System.Drawing.Point(0, 0), bitmap.Size);
-						System.Drawing.Color pixel = bitmap.GetPixel(0, 0);
+						B1, B2,B3,B4,B5,B6, B7, B8, B9
+					};
+				List<TextBlock> ts = new()
+					{
+						T1, T2,T3,T4,T5,T6, T7, T8, T9
+					};
 
-
-						bs[count].Background = new SolidColorBrush { Color = System.Windows.Media.Color.FromRgb(pixel.R, pixel.G, pixel.B) }; // Set color
-						ts[count].Text = $"({p.X + x}, {p.Y + y})";
-						ts[count].Foreground = new SolidColorBrush { Color = System.Windows.Media.Color.FromRgb((byte)(255 - pixel.R), (byte)(255 - pixel.B), (byte)(255 - pixel.B)) };
+				var colors = await GetColors();
+				for (int i = 0; i < colors.Count; i++)
+				{
+					for (int j = 0; j < colors[i].Count; j++)
+					{
+						bs[count].Background = new SolidColorBrush { Color = System.Windows.Media.Color.FromRgb(colors[i][j].R, colors[i][j].G, colors[i][j].B) };
+						ts[count].Text = $"({p.X + i - 1}, {p.Y + j - 1})";
+						ts[count].Foreground = new SolidColorBrush { Color = System.Windows.Media.Color.FromRgb((byte)(255 - colors[i][j].R), (byte)(255 - colors[i][j].B), (byte)(255 - colors[i][j].B)) };
 						count++;
 					}
 				}
 			};
 			dispatcherTimer.Start();
+		}
+
+		private async Task<List<List<System.Drawing.Color>>> GetColors()
+		{
+			List<List<System.Drawing.Color>> result = new() { new(), new(), new() };
+			System.Drawing.Point p = System.Windows.Forms.Cursor.Position;
+			for (int x = -1; x < 2; x++)
+			{
+				result[x + 1] = new() { new(), new(), new() };
+				for (int y = -1; y < 2; y++)
+				{
+					Bitmap bitmap = new(1, 1);
+					Graphics GFX = Graphics.FromImage(bitmap);
+					GFX.CopyFromScreen(new(p.X + x, p.Y + y), new System.Drawing.Point(0, 0), bitmap.Size);
+					var pixel = bitmap.GetPixel(0, 0);
+					result[x + 1][y + 1] = pixel;
+				}
+			}
+			return result;
 		}
 	}
 }
