@@ -21,20 +21,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. 
 */
-using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 
 namespace LABS_WPF.Windows
@@ -75,7 +66,7 @@ namespace LABS_WPF.Windows
 
 						bs[count].Background = new SolidColorBrush { Color = System.Windows.Media.Color.FromRgb(pixel.R, pixel.G, pixel.B) }; // Set color
 						ts[count].Text = $"({p.X + x}, {p.Y + y})";
-						ts[count].Foreground = new SolidColorBrush { Color = System.Windows.Media.Color.FromRgb((byte)(255-pixel.R), (byte)(255-pixel.B), (byte)(255-pixel.B)) };
+						ts[count].Foreground = new SolidColorBrush { Color = System.Windows.Media.Color.FromRgb((byte)(255 - pixel.R), (byte)(255 - pixel.B), (byte)(255 - pixel.B)) };
 						count++;
 					}
 				}
