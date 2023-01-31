@@ -130,5 +130,10 @@ namespace LABS_WPF
 		{
 			new MousePixelsWindow().Show();
 		}
+
+		private void TestButton_Click_12(object sender, RoutedEventArgs e)
+		{
+			new ZoomWindow().Show();
+		}
 	}
 }

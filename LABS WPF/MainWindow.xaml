@@ -31,6 +31,7 @@
             <local:TestButton extensions:CornerRadiusExtension.CornerRadius="5" Content="ListView" Width="110" VerticalAlignment="Top" Click="TestButton_Click_9"></local:TestButton>
             <local:TestButton extensions:CornerRadiusExtension.CornerRadius="5" Content="Animation" Width="110" VerticalAlignment="Top" Click="TestButton_Click_10"></local:TestButton>
             <local:TestButton extensions:CornerRadiusExtension.CornerRadius="5" Content="Picker" Width="110" VerticalAlignment="Top" Click="TestButton_Click_11"></local:TestButton>
+            <local:TestButton extensions:CornerRadiusExtension.CornerRadius="5" Content="ZoomScreen" Width="110" VerticalAlignment="Top" Click="TestButton_Click_12"></local:TestButton>
         </WrapPanel>
     </Grid>
 </Window>
