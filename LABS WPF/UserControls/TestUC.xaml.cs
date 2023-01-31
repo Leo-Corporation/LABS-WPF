@@ -37,8 +37,10 @@ namespace LABS_WPF.UserControls
 		public TestUC()
 		{
 			InitializeComponent();
-			DispatcherTimer timer = new DispatcherTimer();
-			timer.Interval = TimeSpan.FromMilliseconds(100);
+			DispatcherTimer timer = new()
+			{
+				Interval = TimeSpan.FromMilliseconds(100)
+			};
 			timer.Tick += Timer_Tick;
 			timer.Start();
 		}

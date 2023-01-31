@@ -77,19 +77,21 @@ namespace LABS_WPF.Windows
 
 		internal void EnableBlur()
 		{
-			var windowHelper = new WindowInteropHelper(this);
+			WindowInteropHelper windowHelper = new(this);
 
-			var accent = new AccentPolicy();
-			var accentStructSize = Marshal.SizeOf(accent);
+			AccentPolicy accent = new();
+			int accentStructSize = Marshal.SizeOf(accent);
 			accent.AccentState = AccentState.ACCENT_ENABLE_BLURBEHIND;
 
-			var accentPtr = Marshal.AllocHGlobal(accentStructSize);
+			nint accentPtr = Marshal.AllocHGlobal(accentStructSize);
 			Marshal.StructureToPtr(accent, accentPtr, false);
 
-			var data = new WindowCompositionAttributeData();
-			data.Attribute = WindowCompositionAttribute.WCA_ACCENT_POLICY;
-			data.SizeOfData = accentStructSize;
-			data.Data = accentPtr;
+			WindowCompositionAttributeData data = new()
+			{
+				Attribute = WindowCompositionAttribute.WCA_ACCENT_POLICY,
+				SizeOfData = accentStructSize,
+				Data = accentPtr
+			};
 
 			SetWindowCompositionAttribute(windowHelper.Handle, ref data);
 

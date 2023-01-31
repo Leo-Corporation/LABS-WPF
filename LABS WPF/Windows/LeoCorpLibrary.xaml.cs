@@ -46,14 +46,14 @@ namespace LABS_WPF.Windows
 
 		private void ScaleBtn_Click(object sender, RoutedEventArgs e)
 		{
-			var dpi = ScreenHelpers.GetDpi(this);
-			var scale = ScreenHelpers.GetScreenScaling(this);
+			double dpi = ScreenHelpers.GetDpi(this);
+			double scale = ScreenHelpers.GetScreenScaling(this);
 			MessageBox.Show($"DPI: {dpi}\nScale: {scale}");
 		}
 
 		private async void PwrBtn_Click(object sender, RoutedEventArgs e)
 		{
-			var pwrs = await Password.GenerateAsync(10, 15, PasswordPresets.Complex);
+			System.Collections.Generic.List<string> pwrs = await Password.GenerateAsync(10, 15, PasswordPresets.Complex);
 			string msg = "";
 			for (int i = 0; i < pwrs.Count; i++)
 			{

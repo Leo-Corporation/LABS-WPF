@@ -33,7 +33,7 @@ namespace LABS_WPF.Windows
 	/// </summary>
 	public partial class DownloadFileWPF : Window
 	{
-		WebClient client = new WebClient();
+		WebClient client = new();
 		string path = System.AppDomain.CurrentDomain.BaseDirectory + @"\test.txt";
 		string link = "https://raw.githubusercontent.com/Leo-Corporation/LeoCorp-Docs/master/Liens/Update%20System/G%C3%A9n%C3%A9rateur%20de%20mots%20de%20passe%203/G%C3%A9n%C3%A9rateur%20de%20mots%20de%20passe%203.exe";
 		public DownloadFileWPF()
@@ -45,9 +45,9 @@ namespace LABS_WPF.Windows
 		{
 			client.DownloadProgressChanged += Client_DownloadProgressChanged;
 			client.DownloadFileCompleted += Client_DownloadFileCompleted;
-			Thread thread = new Thread(() =>
+			Thread thread = new(() =>
 			{
-				Uri uri = new Uri(link);
+				Uri uri = new(link);
 				client.DownloadFileAsync(uri, path);
 			});
 			thread.Start();

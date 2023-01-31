@@ -35,7 +35,7 @@ namespace LABS_WPF.Windows
 	/// </summary>
 	public partial class UserControlAdd : Window
 	{
-		AddUC add = new AddUC();
+		AddUC add = new();
 		public UserControlAdd()
 		{
 			InitializeComponent();
@@ -50,7 +50,7 @@ namespace LABS_WPF.Windows
 
 		internal void AddUC()
 		{
-			TestUC testUC = new TestUC();
+			TestUC testUC = new();
 			WrapPanel1.Children.Add(testUC);
 			WrapPanel1.Children.Remove(add);
 			WrapPanel1.Children.Add(add);
@@ -96,7 +96,7 @@ namespace LABS_WPF.Windows
 		{
 			try
 			{
-				List<TestUC> testUCs = new List<TestUC>();
+				List<TestUC> testUCs = new();
 				UIElementCollection uIElementCollection = WrapPanel1.Children;
 
 				foreach (UIElement uIElement in uIElementCollection)

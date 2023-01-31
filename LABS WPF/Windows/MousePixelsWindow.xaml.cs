@@ -61,7 +61,7 @@ namespace LABS_WPF.Windows
 						Bitmap bitmap = new(1, 1);
 						Graphics GFX = Graphics.FromImage(bitmap);
 						GFX.CopyFromScreen(new(p.X + x, p.Y + y), new System.Drawing.Point(0, 0), bitmap.Size);
-						var pixel = bitmap.GetPixel(0, 0);
+						System.Drawing.Color pixel = bitmap.GetPixel(0, 0);
 
 
 						bs[count].Background = new SolidColorBrush { Color = System.Windows.Media.Color.FromRgb(pixel.R, pixel.G, pixel.B) }; // Set color

@@ -45,7 +45,7 @@ namespace LABS_WPF.UserControls
 		{
 			double max = val.Max();
 			double coef = ChartPresenter.Width / max;
-			List<double> widths = new List<double>();
+			List<double> widths = new();
 
 			foreach (double value in val)
 			{

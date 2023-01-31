@@ -41,16 +41,16 @@ namespace LABS_WPF
 				Shutdown();
 			}
 
-			JumpTask jumpTask = new JumpTask
+			JumpTask jumpTask = new()
 			{
 				Title = "This is a test",
 				Description = "A test jump list.",
-				IconResourcePath = System.Reflection.Assembly.GetEntryAssembly().CodeBase,
-				ApplicationPath = System.Reflection.Assembly.GetEntryAssembly().CodeBase,
+				IconResourcePath = System.Reflection.Assembly.GetEntryAssembly().Location,
+				ApplicationPath = System.Reflection.Assembly.GetEntryAssembly().Location,
 				Arguments = "/test"
 			};
 
-			JumpList jumpList = new JumpList();
+			JumpList jumpList = new();
 			jumpList.JumpItems.Add(jumpTask);
 			jumpList.ShowFrequentCategory = false;
 			jumpList.ShowRecentCategory = false;

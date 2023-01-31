@@ -67,7 +67,7 @@ namespace LABS_WPF
 		/// <param name="e"></param>
 		private void LABSButton1_Click(object sender, RoutedEventArgs e)
 		{
-			About about = new About();
+			About about = new();
 			about.Show(); // Ouvrir la fenêtre "A propos"
 		}
 

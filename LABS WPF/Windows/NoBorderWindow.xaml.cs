@@ -37,7 +37,7 @@ namespace LABS_WPF.Windows
 		public NoBorderWindow()
 		{
 			InitializeComponent();
-			var image = new BitmapImage();
+			BitmapImage image = new();
 			image.BeginInit();
 			image.UriSource = new Uri("https://media.rawg.io/media/achievements/189/189299bbae4d128e4c85b5e9c671f727.jpg");
 			image.DecodePixelWidth = 50;
