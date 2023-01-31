@@ -141,5 +141,10 @@ namespace LABS_WPF
 		{
 			new AnimatedWindow().Show(); // Show
 		}
-	}
+
+		private void TestButton_Click_11(object sender, RoutedEventArgs e)
+		{
+			new MousePixelsWindow().Show();
+        }
+    }
 }
