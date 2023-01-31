@@ -21,7 +21,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. 
 */
-using LeoCorpLibrary;
+using PeyrSharp.Core.Maths;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,7 +52,7 @@ namespace LABS_WPF.UserControls
 
 		void InitUI(params double[] val)
 		{
-			double max = Maths.GetBiggestNumber(val);
+			double max = val.Max();
 			double coef = ChartPresenter.Width / max;
 			List<double> widths = new List<double>();
 

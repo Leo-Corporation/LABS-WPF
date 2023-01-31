@@ -34,9 +34,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using LeoCorpLibrary;
-using LeoCorpLibrary.Enums;
-using LeoCorpLibrary.UI;
+using PeyrSharp.Core.Maths;
+using PeyrSharp.Core;
+using PeyrSharp.Enums;
+using PeyrSharp.UiHelpers;
 
 namespace LABS_WPF.Windows
 {
@@ -52,19 +53,19 @@ namespace LABS_WPF.Windows
 
 		private void TestButton_Click(object sender, RoutedEventArgs e)
 		{
-			MessageBox.Show(Maths.Sum(10, -1, 10.3).ToString());
+			MessageBox.Show(Algebra.Sum(10, -1, 10.3).ToString());
 		}
 
 		private void ScaleBtn_Click(object sender, RoutedEventArgs e)
 		{
-			var dpi = ScreenHelpers.GetScreenDPIFromWPFWindow(this);
-			var scale = ScreenHelpers.GetScreenScalingFromWPFWindow(this);
+			var dpi = ScreenHelpers.GetDpi(this);
+			var scale = ScreenHelpers.GetScreenScaling(this);
 			MessageBox.Show($"DPI: {dpi}\nScale: {scale}");
 		}
 
-		private void PwrBtn_Click(object sender, RoutedEventArgs e)
+		private async void PwrBtn_Click(object sender, RoutedEventArgs e)
 		{
-			var pwrs = Password.GenerateAmount(10, 15, PasswordPresets.Complex);
+			var pwrs = await Password.GenerateAsync(10, 15, PasswordPresets.Complex);
 			string msg = "";
 			for (int i = 0; i < pwrs.Count; i++)
 			{

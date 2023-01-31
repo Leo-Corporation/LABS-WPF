@@ -53,9 +53,9 @@
     <SplashScreen Include="SplashScreen1.png" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Emoji.Wpf" Version="0.3.3" />
-    <PackageReference Include="LeoCorpLibrary" Version="4.7.0.2206" />
+    <PackageReference Include="Emoji.Wpf" Version="0.3.4" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="PeyrSharp" Version="1.2.0.2301" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>
 </Project>

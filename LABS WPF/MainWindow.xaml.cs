@@ -49,10 +49,7 @@ namespace LABS_WPF
 	{
 		public MainWindow()
 		{
-			//Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-US");
 			InitializeComponent();
-			LeoCorpLibrary.Update.GetLastVersion("https://bing.com");
-
 		}
 
 		/// <summary>

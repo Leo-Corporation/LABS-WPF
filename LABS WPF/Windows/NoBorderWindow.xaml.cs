@@ -22,7 +22,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. 
 */
 using LABS_WPF.UserControls;
-using LeoCorpLibrary;
+using PeyrSharp.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -57,7 +57,7 @@ namespace LABS_WPF.Windows
 
 			for (int i = 0; i < 10; i++)
 			{
-				Combobox.Items.Add(new CustomItem(Password.Generate(10, "A.B.C.D.E.F.G", ".")));
+				Combobox.Items.Add(new CustomItem(Password.GenerateAsync(10, "A.B.C.D.E.F.G", ".").GetAwaiter().GetResult()));
 			}
 
 			EmojiTxt.Text = "🇫🇷";
